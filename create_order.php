@@ -6,6 +6,8 @@ include("header.php");
 
 <?php include("nav.php"); ?>
 
+<link rel="stylesheet" type="text/css" href="plugins/datepicker/datepicker.min.css">
+
     <article class="main__content content">
 
       <h4>Package Type</h4>
@@ -34,7 +36,8 @@ include("header.php");
       </div>
 
       <h4>Pick Up Details</h4>
-      <input class="textfield" id="textfield-1" placeholder="Date" />
+
+      <input type="text" class="textfield" name="date" id="datepick" placeholder="Date" data-toggle="datepicker"/>
       <select class="select select--radius" id="select_box-2">
         <option value="">Select Time Range</option>
 
@@ -186,8 +189,13 @@ include("header.php");
   <?php include("footer.php"); ?>
 
 <!-- js here -->
+<script type="text/javascript" src="plugins/datepicker/datepicker.min.js"></script>
 
-
+<script>
+  $('[data-toggle="datepicker"]').datepicker({
+    format: 'dd-mm-YYYY'
+  });
+</script>
 <!-- end js -->
 
 <?php include("end.php"); ?>
