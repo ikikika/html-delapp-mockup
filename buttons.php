@@ -1,4 +1,8 @@
-<?php include("header.php"); ?>
+<?php
+$title = "Buttons";
+$page = "buttons";
+include("header.php");
+?>
 
 <?php include("nav.php"); ?>
 
@@ -42,5 +46,12 @@
       </div>
 
     </article>
-    
+
 <?php include("footer.php"); ?>
+
+<!-- js here -->
+
+
+<!-- end js -->
+
+<?php include("end.php"); ?>

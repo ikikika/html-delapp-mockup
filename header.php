@@ -35,7 +35,7 @@
         <div class="header__account account account--has-login">
             <div class="account__wrapper">
               <img class="account__img" src="./images/red.jpg" />
-              <span class="account__name">Irfan</span>
+              <span class="account__name">Username</span>
             </div>
             <i class="account__arrow fa fa-angle-down js--show-dropdown-menu"></i>
 

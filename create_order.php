@@ -2,7 +2,6 @@
 $title = "Create Order";
 $page = "create_order";
 include("header.php");
-
 ?>
 
 <?php include("nav.php"); ?>
@@ -185,3 +184,10 @@ include("header.php");
 
     </article>
   <?php include("footer.php"); ?>
+
+<!-- js here -->
+
+
+<!-- end js -->
+
+<?php include("end.php"); ?>

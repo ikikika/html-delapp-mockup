@@ -1,4 +1,8 @@
-<?php include("header.php"); ?>
+<?php
+$title = "Alerts";
+$page = "alerts";
+include("header.php");
+?>
 
 <?php include("nav.php"); ?>
 
@@ -27,5 +31,12 @@
         </div>
       </div>
     </article>
-    
+
 <?php include("footer.php"); ?>
+
+<!-- js here -->
+
+
+<!-- end js -->
+
+<?php include("end.php"); ?>

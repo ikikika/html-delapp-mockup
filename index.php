@@ -177,3 +177,10 @@
     </article>
 
 <?php include("footer.php"); ?>
+
+<!-- js here -->
+
+
+<!-- end js -->
+
+<?php include("end.php"); ?>
