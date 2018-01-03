@@ -37,7 +37,7 @@ include("header.php");
 
       <h4>Pick Up Details</h4>
       <div class="content__wrapper">
-        <input type="text" class="textfield" name="date" id="datepick1" placeholder="Pick Up Date" data-toggle="datepicker"/>
+        <input type="text" class="textfield textfield--shadow" name="date" id="datepick1" placeholder="Pick Up Date" data-toggle="datepicker"/>
         <select class="select select--radius" id="select_box-2">
           <option value="">Select Time Range for Pick Up</option>
           <option value="">12AM - 1AM</option>
@@ -65,13 +65,13 @@ include("header.php");
           <option value="">10PM - 11PM</option>
           <option value="">11PM - 12PM</option>
         </select>
-        <input class="textfield" id="autocomplete1" placeholder="Pick Up Location"
+        <input class="textfield textfield--shadow" id="autocomplete1" placeholder="Pick Up Location"
                onFocus="geolocate()" type="text"/>
     </div>
 
     <h4>Delivery Details</h4>
     <div class="content__wrapper">
-    <input type="text" class="textfield" name="date" id="datepick2" placeholder="Delivery Date" data-toggle="datepicker"/>
+    <input type="text" class="textfield textfield--shadow" name="date" id="datepick2" placeholder="Delivery Date" data-toggle="datepicker"/>
     <select class="select select--radius" id="select_box-2">
       <option value="">Select Time Range for Delivery</option>
       <option value="">12AM - 1AM</option>
@@ -99,14 +99,14 @@ include("header.php");
       <option value="">10PM - 11PM</option>
       <option value="">11PM - 12PM</option>
     </select>
-    <input class="textfield" id="autocomplete2" placeholder="Delivery Location"
+    <input class="textfield textfield--shadow" id="autocomplete2" placeholder="Delivery Location"
         onFocus="geolocate()" type="text"/>
     </div>
 
     <h4>Receiver Information</h4>
     <div class="content__wrapper">
-      <input class="textfield" placeholder="Receiver Name" />
-      <input class="textfield"  placeholder="Receiver contact no" />
+      <input class="textfield textfield--shadow" placeholder="Receiver Name" />
+      <input class="textfield textfield--shadow"  placeholder="Receiver contact no" />
     </div>
 
     <div class="content__wrapper">

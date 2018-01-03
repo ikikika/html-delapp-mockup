@@ -19,8 +19,8 @@
       </a>
     </li> -->
 
-    <li class="nav__item ">
-      <a href="index.php">
+    <li class="nav__item <?= $title == "Edit Profile" ? "nav__item--active" : "" ?>">
+      <a href="edit_profile.php">
         <i class="nav__icon fa fa-user"></i> Edit Profile
       </a>
     </li>
