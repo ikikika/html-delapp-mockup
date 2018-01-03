@@ -10,6 +10,9 @@ include("header.php");
 <link rel="stylesheet" href="css/modal.css">
 
     <article class="main__content content">
+
+      <a href="index.php" class="button button--blue">Back</a>
+
       <h4>Timeline for Order No. XXXXMMDD01 </h4>
       <div class="content__wrapper">
         <!-- The time line -->

@@ -25,11 +25,11 @@ function initNavEvent(){
 				$(el).find('.nav__wrapper--child').slideUp();
 			}
 	        $(el).removeClass('nav__item--active');
-	    });        
+	    });
 
         if($(target).hasClass('nav__item--has-child')){
         	$(target).find('.nav__item--child').removeClass('nav__item--active');
-        	$(target).find('.nav__arrow').toggleClass('nav__arrow--active');        	
+        	$(target).find('.nav__arrow').toggleClass('nav__arrow--active');
         	$(target).find('.nav__wrapper--child').slideToggle();
         }
 
@@ -42,7 +42,7 @@ function initNavEvent(){
 function initAccountPopover(){
 	var item = $('.account--has-login');
 	item.hover(function(){
-		var menu = $(this).find('.account__menu');		
+		var menu = $(this).find('.account__menu');
         $(menu).stop(true, true).slideDown();
     }, function(){
         var menu = $(this).find('.account__menu');
@@ -66,12 +66,18 @@ function initOffCanvasMenu(){
 }
 
 $(document).ready(function () {
-	'use strict';   
+	'use strict';
 	initNavEvent();
 	initAccountPopover();
-    initOffCanvasMenu();
+	initOffCanvasMenu();
+
+	$(".alert__close").click(function(){
+		$(this).parent().fadeOut();
+	});
+
+
 });
 
 $(window).load(function(){
-    'use strict';    
+    'use strict';
 });
