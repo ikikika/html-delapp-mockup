@@ -1077,3 +1077,6 @@ top: 50%;
   .alert__close{
     color:#fff !important;
   }
+.button-xs{
+  padding:5px !important;
+}

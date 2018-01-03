@@ -77,6 +77,10 @@ include("header.php"); ?>
               </thead>
               <tbody class="table__body">
                 <tr>
+                  <td><a href="timeline.php">XXXXMMDD02</a></td>
+                  <td>Created <a href="" class="button button--red button-xs">Cancel</a></td>
+                </tr>
+                <tr>
                   <td><a href="timeline.php">XXXXMMDD01</a></td>
                   <td>Pending Pick Up</td>
                 </tr>
