@@ -22,7 +22,7 @@
 </head>
 <body class="site">
 
-  <header role="header" class="site__header header" id="home">
+  <header role="header" class="site__header header" id="home" style="z-index:99;">
   		<div class="header__wrapper">
 
         <div class="header__brand">
