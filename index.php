@@ -1,4 +1,7 @@
-<?php include("header.php"); ?>
+<?php
+$title = "Dashboard";
+
+include("header.php"); ?>
 
 <?php include("nav.php"); ?>
 
@@ -41,7 +44,7 @@
           <div class="card__header">
             <div class="card__title">Completed Orders</div>
             <div class="card__tools">
-              
+
             </div>
           </div>
           <div class="card__content">

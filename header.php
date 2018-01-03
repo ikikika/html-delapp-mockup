@@ -28,7 +28,7 @@
         <div class="header__brand">
           <img src="./images/brand.png" />
           <div class="header__title">
-            Lightweight Admin Template
+            Delapp
           </div>
         </div>
 

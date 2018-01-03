@@ -1,6 +1,6 @@
 <?php
 $title = "Create Order";
-$page = "create_order";
+
 include("header.php");
 ?>
 
