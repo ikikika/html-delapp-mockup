@@ -64,7 +64,7 @@ include("header.php"); ?>
       <div class="grid__col-12 card__wrapper">
         <div class="card card--blue">
           <div class="card__header">
-            <div class="card__title">Order Status</div>
+            <div class="card__title">View Timeline</div>
           </div>
           <div class="card__content">
 
