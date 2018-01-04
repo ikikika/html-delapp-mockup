@@ -1,4 +1,5 @@
-<?php include("header.php"); ?>
+<?php $title = "Invoices";
+include("header.php"); ?>
 
 <?php include("nav.php"); ?>
 

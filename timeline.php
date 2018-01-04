@@ -1,6 +1,6 @@
 <?php
-$title = "Alerts";
-$page = "alerts";
+$title = "Timeline";
+
 include("header.php");
 ?>
 
@@ -202,14 +202,14 @@ include("header.php");
 
 <script>
   $(document).ready(function(){
-    var baseurl = "http://localhost/delapp/images/";
+    var baseurl = "https://lucidcoding.com/delapp/user/images/";
     // Get the modal
     var modal = document.getElementById('myModal');
 
     $(".timeline-img").click(function() {
       var img = $(this).css('background-image').replace('url("', '').replace(baseurl, '').replace('")', '');
       $(".modal-img").attr('src', 'images/'+img);
-          console.log( img );
+          //console.log( img );
           modal.style.display = "block";
     });
 

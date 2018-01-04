@@ -9,13 +9,13 @@ include("header.php"); ?>
 
   <div class="content__wrapper">
 
-    <div class="alert alert--radius alert--green bg-blue">
-      <a href="javascript:void(0)" class="alert__close">x</a>
+    <div class="alert alert--radius alert--orange bg-yellow">
+      <span class="alert__close">x</span>
       <strong>Order XXXXMMDD01</strong> Driver assigned
     </div>
 
     <div class="alert alert--radius alert--green bg-green">
-      <a href="javascript:void(0)" class="alert__close">x</a>
+      <span class="alert__close">x</span>
       <strong>Order XXXXMMDD01</strong> Package delivered
     </div>
 

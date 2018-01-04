@@ -16,9 +16,6 @@
         <link rel="stylesheet" type="text/css" href="css/bem-kit.min.css">
 
 
-
-
-
 </head>
 <body class="site">
 
