@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>User Login</title>
+    <title>Driver Login</title>
 
     <style>
     .login-page {
@@ -45,7 +45,7 @@
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #0096d9;
+    background: #303030;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -56,7 +56,7 @@
     cursor: pointer;
     }
     .form button:hover,.form button:active,.form button:focus {
-    background: #43A047;
+    background: #202020;
     }
     .form .message {
     margin: 15px 0 0;
@@ -64,7 +64,7 @@
     font-size: 12px;
     }
     .form .message a {
-    color: #0096d9;
+    color: #303030;
     text-decoration: none;
     }
     .form .register-form {
@@ -104,12 +104,12 @@
     color: #EF3B3A;
     }
     body {
-    background: #0096d9; /* fallback for old browsers */
+    background: #303030; /* fallback for old browsers */
     /* background: -webkit-linear-gradient(right, #76b852, #8DC26F);
     background: -moz-linear-gradient(right, #76b852, #8DC26F);
     background: -o-linear-gradient(right, #76b852, #8DC26F);
     background: linear-gradient(to left, #76b852, #8DC26F); */
-    background-image: url(images/road.jpg);
+    background-image: url(images/docks.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
