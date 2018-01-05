@@ -1,9 +1,9 @@
 <nav class="main__nav nav">
 
   <ul class="nav__wrapper">
-    <li class="nav__item <?= $title == "Dashboard" ? "nav__item--active" : "" ?>">
+    <li class="nav__item <?= $title == "Tasks" ? "nav__item--active" : "" ?>">
       <a href="index.php">
-        <i class="nav__icon fa fa-dashboard"></i> Dashboard
+        <i class="nav__icon fa fa-dashboard"></i> Tasks
       </a>
     </li>
 

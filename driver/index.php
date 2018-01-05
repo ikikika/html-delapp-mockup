@@ -1,5 +1,5 @@
 <?php
-$title = "Dashboard";
+$title = "Tasks";
 
 include("header.php"); ?>
 
@@ -9,104 +9,121 @@ include("header.php"); ?>
 
   <div class="content__wrapper">
 
-    <div class="alert alert--radius alert--orange bg-yellow">
-      <span class="alert__close">x</span>
-      <strong>Order XXXXMMDD01</strong> Driver assigned
-    </div>
+      <h4>Tasks for <?= date('d M Y') ?></h4>
 
-    <div class="alert alert--radius alert--green bg-green">
-      <span class="alert__close">x</span>
-      <strong>Order XXXXMMDD01</strong> Package delivered
-    </div>
-
-    <div class="grid__row">
-
-      <div class="grid__col-6 card__wrapper">
-        <div class="card card--orange">
-          <div class="card__header">
-            <div class="card__title">In Progress Orders</div>
-            <div class="card__tools">
-
-            </div>
-          </div>
-          <div class="card__content">
-            <div class="card__align">
-              <div class="card__big-text">
-                5
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid__col-6 card__wrapper">
-        <div class="card card--red">
-          <div class="card__header">
-            <div class="card__title">Completed Orders</div>
-            <div class="card__tools">
-
-            </div>
-          </div>
-          <div class="card__content">
-            <div class="card__align">
-              <div class="card__big-text">
-                12
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="grid__row">
-
-      <div class="grid__col-12 card__wrapper">
+      <div class="grid__col-4 card__wrapper">
         <div class="card card--blue">
           <div class="card__header">
-            <div class="card__title">View Timeline</div>
+            <div class="card__title">Pick Up @ 8AM-9AM</div>
+            <div class="card__tools">
+            </div>
           </div>
           <div class="card__content">
-
-            <table class="table">
-              <thead class="table__head">
-                <tr>
-                  <th>Order No.</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody class="table__body">
-                <tr>
-                  <td><a href="timeline.php">XXXXMMDD02</a></td>
-                  <td>Created <a href="" class="button button--red button-xs">Cancel</a></td>
-                </tr>
-                <tr>
-                  <td><a href="timeline.php">XXXXMMDD01</a></td>
-                  <td>Pending Pick Up</td>
-                </tr>
-                <tr>
-                  <td><a href="timeline.php">XXXXMMDD04</a></td>
-                  <td>Pending Delivery</td>
-                </tr>
-                <tr>
-                  <td><a href="timeline.php">XXXXMMDD05</a></td>
-                  <td>Completed</td>
-                </tr>
-              </tbody>
-            </table>
-
-
+            <p>Order: XXXXMMDD001 </p>
+            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Contact: John Doe</p>
+            <p>Tel: 123-456-789</p>
+            <p>Package: 2 boxes</p>
+            <a href="" class="button button--radius button--green">Start Task</a>
           </div>
         </div>
       </div>
 
+      <div class="grid__col-4 card__wrapper">
+        <div class="card card--darkred">
+          <div class="card__header">
+            <div class="card__title">Drop Off</div>
+            <div class="card__tools">
+            </div>
+          </div>
+          <div class="card__content">
+            <p>Order: XXXXMMDD001 </p>
+            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Contact: John Doe</p>
+            <p>Tel: 123-456-789</p>
+            <p>Package: 2 boxes</p>
+            <a href="" class="button button--radius button--green">Start Task</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid__col-4 card__wrapper">
+        <div class="card card--blue">
+          <div class="card__header">
+            <div class="card__title">Pick Up @ 12PM - 1PM</div>
+            <div class="card__tools">
+            </div>
+          </div>
+          <div class="card__content">
+            <p>Order: XXXXMMDD001 </p>
+            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Contact: John Doe</p>
+            <p>Tel: 123-456-789</p>
+            <p>Package: 2 boxes</p>
+            <a href="" class="button button--radius button--green">Start Task</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid__col-4 card__wrapper">
+        <div class="card card--purple">
+          <div class="card__header">
+            <div class="card__title">Delivery @ 2:30PM</div>
+            <div class="card__tools">
+            </div>
+          </div>
+          <div class="card__content">
+            <p>Order: XXXXMMDD001 </p>
+            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Contact: John Doe</p>
+            <p>Tel: 123-456-789</p>
+            <p>Package: 2 boxes</p>
+            <a href="" class="button button--radius button--green">Start Task</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="grid__col-4 card__wrapper">
+        <div class="card card--blue">
+          <div class="card__header">
+            <div class="card__title">Pick Up @ 3PM - 4PM</div>
+            <div class="card__tools">
+            </div>
+          </div>
+          <div class="card__content">
+            <p>Order: XXXXMMDD001 </p>
+            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Contact: John Doe</p>
+            <p>Tel: 123-456-789</p>
+            <p>Package: 2 boxes</p>
+            <a href="" class="button button--radius button--green">Start Task</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid__col-4 card__wrapper">
+        <div class="card card--darkred">
+          <div class="card__header">
+            <div class="card__title">Drop Off</div>
+            <div class="card__tools">
+            </div>
+          </div>
+          <div class="card__content">
+            <p>Order: XXXXMMDD001 </p>
+            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Contact: John Doe</p>
+            <p>Tel: 123-456-789</p>
+            <p>Package: 2 boxes</p>
+            <a href="" class="button button--radius button--green">Start Task</a>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
-
-  </div>
-
-
-
-
 
 
 </article>
