@@ -25,11 +25,7 @@
       </a>
     </li>
 
-    <li class="nav__item <?= $title == "Invoices" ? "nav__item--active" : "" ?>">
-      <a href="invoices.php">
-        <i class="nav__icon fa fa-file-text-o"></i> Invoices
-      </a>
-    </li>
+    
 
     <!-- <li class="nav__item nav__item--has-child">
       <a href="#">
