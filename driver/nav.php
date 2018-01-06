@@ -7,9 +7,9 @@
       </a>
     </li>
 
-    <li class="nav__item <?= $title == "Create Order" ? "nav__item--active" : "" ?>">
-      <a href="create_order.php">
-        <i class="nav__icon fa fa-certificate"></i> Create Order
+    <li class="nav__item <?= $title == "Completed Tasks" ? "nav__item--active" : "" ?>">
+      <a href="completed.php">
+        <i class="nav__icon fa fa-certificate"></i> Completed Tasks
       </a>
     </li>
 
