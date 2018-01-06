@@ -24,7 +24,7 @@ include("header.php"); ?>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
-            <a href="" class="button button--radius button--green">Start Task</a>
+            <a href="tasking.php?t=pickup" class="button button--radius button--green">Start Task</a>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@ include("header.php"); ?>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
-            <a href="" class="button button--radius button--green">Start Task</a>
+            <a href="tasking.php?t=dropoff" class="button button--radius button--green">Start Task</a>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@ include("header.php"); ?>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
-            <a href="" class="button button--radius button--green">Start Task</a>
+            <a href="tasking.php?t=pickup" class="button button--radius button--green">Start Task</a>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ include("header.php"); ?>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
-            <a href="" class="button button--radius button--green">Start Task</a>
+            <a href="tasking.php?t=delivery" class="button button--radius button--green">Start Task</a>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@ include("header.php"); ?>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
-            <a href="" class="button button--radius button--green">Start Task</a>
+            <a href="tasking.php?t=pickup" class="button button--radius button--green">Start Task</a>
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@ include("header.php"); ?>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
-            <a href="" class="button button--radius button--green">Start Task</a>
+            <a href="tasking.php?t=dropoff" class="button button--radius button--green">Start Task</a>
           </div>
         </div>
       </div>
