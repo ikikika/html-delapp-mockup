@@ -7,13 +7,17 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
 
-      <li class="<?= $title == "Admin Dashboard" ? "active" : "" ?>">
+      <li class="<?= $title == "Dashboard" ? "active" : "" ?>">
         <a href="index.php">
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         </a>
       </li>
 
-      
+      <li class="<?= $title == "Companies" ? "active" : "" ?>">
+        <a href="companies.php">
+          <i class="fa fa-dashboard"></i> <span>Companies</span>
+        </a>
+      </li>
 
     </ul>
   </section>
