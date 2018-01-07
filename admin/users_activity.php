@@ -13,7 +13,7 @@ include('header.php'); ?>
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Users
+      Users Activity
       <small></small>
     </h1>
     <br>
@@ -36,12 +36,8 @@ include('header.php'); ?>
               <thead>
               <tr>
                 <th>ID</th>
-                <th>Company Name</th>
-                <th>Full Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Username</th>
-                <th>Actions</th>
+                <th>Date</th>
+                <th>Activity</th>
               </tr>
               </thead>
               <tbody>
@@ -66,31 +62,43 @@ include('header.php'); ?>
                           return $randomString;
                       }
 
-                  for($i=1; $i<50;$i++){
+                      function generate123($length = 1) {
+                            $characters = '123';
+                            $charactersLength = strlen($characters);
+                            $randomString = '';
+                            for ($i = 0; $i < $length; $i++) {
+                                $randomString .= $characters[rand(0, $charactersLength - 1)];
+                            }
+                            return $randomString;
+                        }
+
+                  for($i=1; $i<25;$i++){
                 ?>
                 <tr>
                   <td><?= $i ?></td>
-                  <td><?= generateRandomString(); ?> Company</td>
-                  <td><?= generateRandomString(); ?> <?= generateRandomString(); ?></td>
-                  <td><?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?></td>
-                  <td><?= generateRandomString(); ?>@<?= generateRandomString().".com"; ?></td>
-                  <td><?= generateRandomString(6); ?></td>
+                  <td><?= date('d M Y h:i:s a', strtotime('-'.($i*2).' days')) ?></td>
                   <td>
-                    <a href="users_form.php?a=Edit" class="btn btn-warning" title="Edit">
-                      <i class="fa fa-edit"></i>
-                    </a>
-
-                    <a href="users_activity.php" class="btn btn-primary" title="Activity">
-                      <i class="fa fa-list"></i>
-                    </a>
-
-                    <button class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </button>
-
+                    <?php
+                      $r = generate123();
+                      if( $r == 1 ){
+                        echo "Login";
+                      } else if( $r == 2 ){
+                        echo "Create Order";
+                      } else if( $r == 3){
+                        echo "Logout";
+                      }
+                     ?>
                   </td>
                 </tr>
+
               <?php } ?>
+              <tr>
+                <td><?= 25 ?></td>
+                <td><?= date('d M Y h:i:s a', strtotime('-50 days')) ?></td>
+                <td>
+                  Joined
+                </td>
+              </tr>
               </tbody>
 
             </table>
