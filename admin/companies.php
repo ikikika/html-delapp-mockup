@@ -17,7 +17,7 @@ include('header.php'); ?>
       <small></small>
     </h1>
     <br>
-    <button class="btn btn-info">Create New Company</button>
+    <a href="companies_form.php?a=Create" class="btn btn-info">Create New Company</a>
   </section>
 
 
@@ -74,9 +74,9 @@ include('header.php'); ?>
                   <td><?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?></td>
                   <td><?= generateRandomString(); ?> <?= generateRandomString(); ?></td>
                   <td>
-                    <button class="btn btn-warning">
+                    <a href="companies_form.php?a=Edit" class="btn btn-warning">
                       <i class="fa fa-edit"></i>
-                    </button>
+                    </a>
 
                     <button class="btn btn-danger">
                       <i class="fa fa-trash"></i>
