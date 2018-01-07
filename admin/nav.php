@@ -25,6 +25,12 @@
         </a>
       </li>
 
+      <li class="<?= $title == "Drivers" ? "active" : "" ?>">
+        <a href="drivers.php">
+          <i class="fa fa-dashboard"></i> <span>Drivers</span>
+        </a>
+      </li>
+
       <li class="<?= $title == "Orders and Tasks" ? "active" : "" ?>">
         <a href="orders_and_tasks.php">
           <i class="fa fa-dashboard"></i> <span>Orders and Tasks</span>
