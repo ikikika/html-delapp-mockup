@@ -19,6 +19,12 @@
         </a>
       </li>
 
+      <li class="<?= $title == "Users" ? "active" : "" ?>">
+        <a href="users.php">
+          <i class="fa fa-dashboard"></i> <span>Users</span>
+        </a>
+      </li>
+
     </ul>
   </section>
   <!-- /.sidebar -->

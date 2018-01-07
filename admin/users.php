@@ -1,5 +1,5 @@
 <?php
-$title = "Companies";
+$title = "Users";
 include('header.php'); ?>
 
 <?php include('nav.php'); ?>
@@ -13,11 +13,11 @@ include('header.php'); ?>
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Companies
+      Users
       <small></small>
     </h1>
     <br>
-    <a href="companies_form.php?a=Create" class="btn btn-info">Create New Company</a>
+    <a href="users_form.php?a=Create" class="btn btn-info">Create New User</a>
   </section>
 
 
@@ -37,10 +37,10 @@ include('header.php'); ?>
               <tr>
                 <th>ID</th>
                 <th>Company Name</th>
-                <th>GST Registration No.</th>
-                <th>Telephone</th>
-                <th>Contact Person</th>
-                <th>No of Users</th>
+                <th>Full Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Username</th>
                 <th>Actions</th>
               </tr>
               </thead>
@@ -66,17 +66,17 @@ include('header.php'); ?>
                           return $randomString;
                       }
 
-                  for($i=1; $i<12;$i++){
+                  for($i=1; $i<50;$i++){
                 ?>
                 <tr>
                   <td><?= $i ?></td>
                   <td><?= generateRandomString(); ?> Company</td>
-                  <td><?= generateRandomNo(); ?></td>
-                  <td><?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?></td>
                   <td><?= generateRandomString(); ?> <?= generateRandomString(); ?></td>
-                  <td><?= generateRandomNo(2); ?></td>
+                  <td><?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?></td>
+                  <td><?= generateRandomString(); ?>@<?= generateRandomString().".com"; ?></td>
+                  <td><?= generateRandomString(6); ?></td>
                   <td>
-                    <a href="companies_form.php?a=Edit" class="btn btn-warning">
+                    <a href="users_form.php?a=Edit" class="btn btn-warning">
                       <i class="fa fa-edit"></i>
                     </a>
 
