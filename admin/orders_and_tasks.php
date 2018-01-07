@@ -7,7 +7,11 @@ include('nav.php');
 
 <!-- DataTables -->
 <link rel="stylesheet" href="plugins/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-
+<style>
+.table-striped>tbody>tr:nth-of-type(odd){
+  background-color:#ccc;
+}
+</style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 
@@ -41,7 +45,7 @@ include('nav.php');
                 <th>Order Date</th>
                 <th>Tasks</th>
                 <th>Status</th>
-                <!-- <th>Actions</th> -->
+                <th>Actions</th>
               </tr>
               </thead>
               <tbody>
@@ -53,9 +57,11 @@ include('nav.php');
                   <td>
                     <table class="table table-bordered" style="margin-bottom:0px;">
                       <tr>
-                        <td>Pick Up</td>
-                        <td>5 Apr 2018</td>
-                        <td>Pending Start</td>
+                        <tr>
+                          <td width="20%">Pick Up</td>
+                          <td width="30%">5 Apr 2018</td>
+                          <td width="50%">Pending Start</td>
+                        </tr>
                       </tr>
                       <tr>
                         <td>Delivery</td>
@@ -65,6 +71,9 @@ include('nav.php');
                     </table>
                   </td>
                   <td >Incomplete</td>
+                  <td>
+                    <a href="order_manage.php" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                  </td>
                 </tr>
 
                 <tr>
@@ -74,9 +83,9 @@ include('nav.php');
                   <td>
                     <table class="table table-bordered" style="margin-bottom:0px;">
                       <tr>
-                        <td>Pick Up</td>
-                        <td>2 Apr 2018</td>
-                        <td>Completed</td>
+                        <td width="20%">Pick Up</td>
+                        <td width="30%">2 Apr 2018</td>
+                        <td width="50%">Completed</td>
                       </tr>
                       <tr>
                         <td>Drop Off</td>
@@ -96,6 +105,9 @@ include('nav.php');
                     </table>
                   </td>
                   <td >Incomplete</td>
+                  <td>
+                    <a href="order_manage.php" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                  </td>
                 </tr>
 
                 <tr>
@@ -105,9 +117,11 @@ include('nav.php');
                   <td>
                     <table class="table table-bordered" style="margin-bottom:0px;">
                       <tr>
-                        <td>Pick Up</td>
-                        <td>2 Apr 2018</td>
-                        <td>Completed</td>
+                        <tr>
+                          <td width="20%">Pick Up</td>
+                          <td width="30%">2 Apr 2018</td>
+                          <td width="50%">Completed</td>
+                        </tr>
                       </tr>
                       <tr>
                         <td>Delivery</td>
@@ -117,9 +131,10 @@ include('nav.php');
                     </table>
                   </td>
                   <td >Completed</td>
+                  <td>
+                    <a href="order_manage.php" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                  </td>
                 </tr>
-
-
 
               </tbody>
 
