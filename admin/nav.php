@@ -37,6 +37,12 @@
         </a>
       </li>
 
+      <li class="<?= $title == "Packages" ? "active" : "" ?>">
+        <a href="packages.php">
+          <i class="fa fa-dashboard"></i> <span>Packages</span>
+        </a>
+      </li>
+
     </ul>
   </section>
   <!-- /.sidebar -->
