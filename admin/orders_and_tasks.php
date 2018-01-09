@@ -72,7 +72,7 @@ include('nav.php');
                   </td>
                   <td >Incomplete</td>
                   <td>
-                    <a href="order_manage.php" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                    <a href="orders_manage.php" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                   </td>
                 </tr>
 
@@ -106,7 +106,7 @@ include('nav.php');
                   </td>
                   <td >Incomplete</td>
                   <td>
-                    <a href="order_manage.php" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                    <a href="orders_manage.php" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                   </td>
                 </tr>
 
@@ -132,7 +132,7 @@ include('nav.php');
                   </td>
                   <td >Completed</td>
                   <td>
-                    <a href="order_manage.php" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                    <a href="orders_manage.php" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                   </td>
                 </tr>
 

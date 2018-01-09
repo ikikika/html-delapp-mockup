@@ -4,7 +4,7 @@ $a = $_GET['a'];
 $title = $a." Driver";
 include('header.php');
 
-$title = "Users";
+$title = "Drivers";
 
 include('nav.php'); ?>
 
