@@ -7,9 +7,12 @@ $title = "Orders and Tasks";
 
 include('nav.php'); ?>
 
-<!-- DataTables -->
-<link rel="stylesheet" href="plugins/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
+<style>
+.box-body .row{
+  margin-bottom:15px;
+}
+</style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 
@@ -35,26 +38,17 @@ include('nav.php'); ?>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-
-            <form role="form">
-              <div class="box-body">
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Order No</label>
-                  <input type="text" class="form-control" value="XXXXMMDD0001" disabled>
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">User</label>
-                  <input type="text" class="form-control" value="John Doe" disabled>
-                </div>
-
+            <div class="row">
+              <label for="inputEmail3" class="col-sm-2 col-lg-1 control-label">Order No</label>
+              <div class="col-sm-4 col-lg-5">
+                <input type="text" class="form-control" value="XXXXMMDD0001" disabled>
               </div>
-              <!-- /.box-body -->
 
-              <div class="box-footer">
+              <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">User</label>
+              <div class="col-sm-4 col-lg-5">
+                <input type="text" class="form-control" value="John Doe" disabled>
               </div>
-            </form>
+            </div>
           </div>
           <!-- /.box-body -->
         </div>
@@ -70,80 +64,57 @@ include('nav.php'); ?>
             <form role="form">
               <div class="box-body">
 
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Order No</label>
-                  <input type="text" class="form-control" value="XXXXMMDD0001" disabled>
-                </div>
+                <div class="row" >
+                  <label for="inputEmail3" class="col-sm-2 col-lg-1 control-label">Date</label>
+                  <div class="col-sm-4 col-lg-5">
+                    <input type="text" class="form-control" value="2 Apr 2018" disabled>
+                  </div>
 
-                <div class="form-group">
-                  <label for="exampleInputEmail1">GST Registration</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '324324' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Telephone No</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '4234' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Fax</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '23432' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Contact Person</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? 'John Adam' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? 'sd@fasd.csad' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Credit Limit</label>
-                  <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                    <input type="text" class="form-control" value="<?= $a == 'Edit'? '1000.00' : '' ?>">
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Time</label>
+                  <div class="col-sm-4 col-lg-5">
+                    <input type="text" class="form-control" value="12PM-1PM" disabled>
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Sponsor Name</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? 'Peter ABcde' : '' ?>">
+                <div class="row">
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Address</label>
+                  <div class="col-sm-10 col-lg-11">
+                    <input type="text" class="form-control" value="123 NLKNF Street Ave" disabled>
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Sponsor Code</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '132432' : '' ?>">
+                <div class="row">
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Contact</label>
+                  <div class="col-sm-4 col-lg-5">
+                    <input type="text" class="form-control" value="John Doe" disabled>
+                  </div>
+
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Tel</label>
+                  <div class="col-sm-4 col-lg-5">
+                    <input type="text" class="form-control" value="23423432423" disabled>
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Factory Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '43 FInally Valley' : '' ?>">
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                    Set Factory Address as default pickup address
-                  </label>
+                <div class="row">
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Package</label>
+                  <div class="col-sm-10 col-lg-11">
+                    <input type="text" class="form-control" value="2 Boxes" disabled>
+                  </div>
                 </div>
 
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Billing Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '23 Real Road' : '' ?>">
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    Set Billing Address as default pickup address
-                  </label>
+                <div class="row">
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Driver</label>
+                  <div class="col-sm-10 col-lg-11">
+                    <div class="form-group">
+                      <select class="form-control">
+                        <option>Driver 1</option>
+                        <option>Driver 2</option>
+                        <option>Driver 3</option>
+                        <option>Driver 4</option>
+                        <option>Driver 5</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
 
               </div>
@@ -160,100 +131,71 @@ include('nav.php'); ?>
         <!-- /.box -->
 
 
+        <div class="appenddropoff"></div>
+
+        <button class="btn btn-success add_drop_off">Add Drop Off</button>
+        <br><br>
+
         <div class="box">
           <div class="box-header">
+            Delivery
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-
             <form role="form">
               <div class="box-body">
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Order No</label>
-                  <input type="text" class="form-control" value="XXXXMMDD0001" disabled>
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">GST Registration</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '324324' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Telephone No</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '4234' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Fax</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '23432' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Contact Person</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? 'John Adam' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? 'sd@fasd.csad' : '' ?>">
-                </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Credit Limit</label>
-                  <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                    <input type="text" class="form-control" value="<?= $a == 'Edit'? '1000.00' : '' ?>">
+                <div class="row" >
+                  <label for="inputEmail3" class="col-sm-2 col-lg-1 control-label">Date</label>
+                  <div class="col-sm-4 col-lg-5">
+                    <input type="text" class="form-control" value="3 Apr 2018" disabled>
+                  </div>
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Time</label>
+                  <div class="col-sm-4 col-lg-5">
+                    <input type="text" class="form-control" value="3PM" disabled>
                   </div>
                 </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Sponsor Name</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? 'Peter ABcde' : '' ?>">
+                <div class="row">
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Address</label>
+                  <div class="col-sm-10 col-lg-11">
+                    <input type="text" class="form-control" value="123 NLKNF Street Ave" disabled>
+                  </div>
                 </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Sponsor Code</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '132432' : '' ?>">
+                <div class="row">
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Contact</label>
+                  <div class="col-sm-4 col-lg-5">
+                    <input type="text" class="form-control" value="John Doe" disabled>
+                  </div>
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Tel</label>
+                  <div class="col-sm-4 col-lg-5">
+                    <input type="text" class="form-control" value="23423432423" disabled>
+                  </div>
                 </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Factory Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '43 FInally Valley' : '' ?>">
+                <div class="row">
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Package</label>
+                  <div class="col-sm-10 col-lg-11">
+                    <input type="text" class="form-control" value="2 Boxes" disabled>
+                  </div>
                 </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                    Set Factory Address as default pickup address
-                  </label>
+                <div class="row">
+                  <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Driver</label>
+                  <div class="col-sm-10 col-lg-11">
+                    <div class="form-group">
+                      <select class="form-control">
+                        <option>Driver 1</option>
+                        <option>Driver 2</option>
+                        <option>Driver 3</option>
+                        <option>Driver 4</option>
+                        <option>Driver 5</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Billing Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '23 Real Road' : '' ?>">
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    Set Billing Address as default pickup address
-                  </label>
-                </div>
-
               </div>
-              <!-- /.box-body -->
-
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
-
           </div>
-          <!-- /.box-body -->
         </div>
         <!-- /.box -->
 
@@ -269,20 +211,137 @@ include('nav.php'); ?>
 
 <?php include('footer.php'); ?>
 <!--  your js here -->
-<!-- DataTables -->
-<script src="plugins/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="plugins/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
 <script>
   $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
+
+    $(".add_drop_off").click(function(){
+
+      $(".appenddropoff").prepend('<div class="box">\
+                                    <div class="box-header">\
+                                      Drop Off\
+                                    </div>\
+                                    <div class="box-body">\
+                                      <form role="form">\
+                                        <div class="box-body">\
+                                          <div class="row" >\
+                                            <label for="inputEmail3" class="col-sm-2 col-lg-1 control-label">Date</label>\
+                                            <div class="col-sm-4 col-lg-5">\
+                                              <input type="text" class="form-control" value="3 Apr 2018" disabled>\
+                                            </div>\
+                                            <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Time</label>\
+                                            <div class="col-sm-4 col-lg-5">\
+                                              <input type="text" class="form-control" value="3PM" disabled>\
+                                            </div>\
+                                          </div>\
+                                          <div class="row">\
+                                            <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Address</label>\
+                                            <div class="col-sm-10 col-lg-11">\
+                                              <input type="text" class="form-control" value="123 NLKNF Street Ave" disabled>\
+                                            </div>\
+                                          </div>\
+                                          <div class="row">\
+                                            <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Contact</label>\
+                                            <div class="col-sm-4 col-lg-5">\
+                                              <input type="text" class="form-control" value="John Doe" disabled>\
+                                            </div>\
+                                            <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Tel</label>\
+                                            <div class="col-sm-4 col-lg-5">\
+                                              <input type="text" class="form-control" value="23423432423" disabled>\
+                                            </div>\
+                                          </div>\
+                                          <div class="row">\
+                                            <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Package</label>\
+                                            <div class="col-sm-10 col-lg-11">\
+                                              <input type="text" class="form-control" value="2 Boxes" disabled>\
+                                            </div>\
+                                          </div>\
+                                          <div class="row">\
+                                            <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Driver</label>\
+                                            <div class="col-sm-10 col-lg-11">\
+                                              <div class="form-group">\
+                                                <select class="form-control">\
+                                                  <option>Driver 1</option>\
+                                                  <option>Driver 2</option>\
+                                                  <option>Driver 3</option>\
+                                                  <option>Driver 4</option>\
+                                                  <option>Driver 5</option>\
+                                                </select>\
+                                              </div>\
+                                            </div>\
+                                          </div>\
+                                        </div>\
+                                        <div class="box-footer">\
+                                          <button type="submit" class="btn btn-primary">Submit</button>\
+                                        </div>\
+                                      </form>\
+                                    </div>\
+                                  </div>\
+                                  <div class="box">\
+                                                                <div class="box-header">\
+                                                                Pick Up\
+                                                                </div>\
+                                                                <div class="box-body">\
+                                                                  <form role="form">\
+                                                                    <div class="box-body">\
+                                                                      <div class="row" >\
+                                                                        <label for="inputEmail3" class="col-sm-2 col-lg-1 control-label">Date</label>\
+                                                                        <div class="col-sm-4 col-lg-5">\
+                                                                          <input type="text" class="form-control" value="3 Apr 2018" disabled>\
+                                                                        </div>\
+                                                                        <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Time</label>\
+                                                                        <div class="col-sm-4 col-lg-5">\
+                                                                          <input type="text" class="form-control" value="3PM" disabled>\
+                                                                        </div>\
+                                                                      </div>\
+                                                                      <div class="row">\
+                                                                        <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Address</label>\
+                                                                        <div class="col-sm-10 col-lg-11">\
+                                                                          <input type="text" class="form-control" value="123 NLKNF Street Ave" disabled>\
+                                                                        </div>\
+                                                                      </div>\
+                                                                      <div class="row">\
+                                                                        <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Contact</label>\
+                                                                        <div class="col-sm-4 col-lg-5">\
+                                                                          <input type="text" class="form-control" value="John Doe" disabled>\
+                                                                        </div>\
+                                                                        <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Tel</label>\
+                                                                        <div class="col-sm-4 col-lg-5">\
+                                                                          <input type="text" class="form-control" value="23423432423" disabled>\
+                                                                        </div>\
+                                                                      </div>\
+                                                                      <div class="row">\
+                                                                        <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Package</label>\
+                                                                        <div class="col-sm-10 col-lg-11">\
+                                                                          <input type="text" class="form-control" value="2 Boxes" disabled>\
+                                                                        </div>\
+                                                                      </div>\
+                                                                      <div class="row">\
+                                                                        <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Driver</label>\
+                                                                        <div class="col-sm-10 col-lg-11">\
+                                                                          <div class="form-group">\
+                                                                            <select class="form-control">\
+                                                                              <option>Driver 1</option>\
+                                                                              <option>Driver 2</option>\
+                                                                              <option>Driver 3</option>\
+                                                                              <option>Driver 4</option>\
+                                                                              <option>Driver 5</option>\
+                                                                            </select>\
+                                                                          </div>\
+                                                                        </div>\
+                                                                      </div>\
+                                                                    </div>\
+                                                                    <div class="box-footer">\
+                                                                      <button type="submit" class="btn btn-primary">Submit</button>\
+                                                                    </div>\
+                                                                  </form>\
+                                                                </div>\
+                                                              </div>\
+                                  ');
+
+    });
+
+
   })
 </script>
 <!-- end js -->
