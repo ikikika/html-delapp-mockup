@@ -43,6 +43,12 @@
         </a>
       </li>
 
+      <li class="<?= $title == "Calendar" ? "active" : "" ?>">
+        <a href="calendar.php">
+          <i class="fa fa-dashboard"></i> <span>Calendar</span>
+        </a>
+      </li>
+
     </ul>
   </section>
   <!-- /.sidebar -->
