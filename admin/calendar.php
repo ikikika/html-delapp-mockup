@@ -76,7 +76,36 @@ include('header.php'); ?>
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+<div id="calendarModal" class="modal fade">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+            <h4 id="modalTitle" class="modal-title"></h4>
+        </div>
+        <div id="modalBody" class="modal-body">
+          <table class="table">
+            <tr>
+              <td>Name</td>
+              <td>Rod Stark</td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td><span id="modalDesc"></span></td>
+            </tr>
+            <tr>
+              <td>Package</td>
+              <td>2 Boxes</td>
+            </tr>
+          </table>
 
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+</div>
 <?php include('footer.php'); ?>
 <!--  your js here -->
 <!-- fullCalendar 2.2.5 -->
@@ -173,7 +202,13 @@ include('header.php'); ?>
           $(this).remove();
         }
 
-      }
+      },
+      eventClick:  function(event, jsEvent, view) {
+            $('#modalTitle').html(event.title);
+            $('#modalDesc').html(event.description);
+            $('#eventUrl').attr('href',event.url);
+            $('#calendarModal').modal();
+        },
     });
 
     /* ADDING EVENTS */

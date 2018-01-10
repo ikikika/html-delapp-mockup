@@ -9,7 +9,7 @@
 <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/bower_components/jquery-ui/jquery-ui.min.js"></script>
-
+<script src="plugins/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Slimscroll -->
 <script src="plugins/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
