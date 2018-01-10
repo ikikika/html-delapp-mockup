@@ -1,5 +1,5 @@
 <?php
-$title = "Packages";
+$title = "Calendar";
 include('header.php'); ?>
 
 <?php include('nav.php'); ?>
@@ -8,7 +8,11 @@ include('header.php'); ?>
 <link rel="stylesheet" href="plugins/fullcalendarv3/fullcalendar.min.css">
 <link rel="stylesheet" href="plugins/fullcalendarv3/fullcalendar.print.css" media="print">
 <link rel="stylesheet" href="plugins/fullcalendar-scheduler/scheduler.min.css">
-
+<style>
+.external-event .description{
+  font-weight:normal !important;
+}
+</style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Main content -->
@@ -17,16 +21,31 @@ include('header.php'); ?>
       <div class="col-md-3">
         <div class="box box-solid">
           <div class="box-header with-border">
-            <h4 class="box-title">Draggable Events</h4>
+            <h4 class="box-title">Tasks <?= date('d M Y') ?></h4>
           </div>
           <div class="box-body">
             <!-- the events -->
             <div id="external-events">
-              <div class="external-event bg-green">Pick Up @ 8AM-9AM</div>
-              <div class="external-event bg-yellow">Drop Off</div>
-              <div class="external-event bg-aqua">Pick Up @ 12PM - 1PM</div>
-              <div class="external-event bg-light-blue">Delivery @ 2:30PM</div>
-              <div class="external-event bg-red">Pick Up @ 3PM - 4PM</div>
+              <div class="external-event bg-aqua">
+                <span class="title">Pick Up @ 8AM-9AM</span><br>
+                <span class="description">34 Jln Syed Hussein Taman Intan 02600 Arau Arau Perlis 02600 Malaysia Arau Perlis 02600 Malaysia</span>
+              </div>
+              <div class="external-event bg-red">
+                <span class="title">Drop Off</span><br>
+                <span class="description">Kawasan Perindustrian, Bukit Serdang, 43300</span>
+              </div>
+              <div class="external-event bg-aqua">
+                <span class="title">Pick Up @ 12PM - 1PM</span><br>
+                <span class="description">Kampung Tengah Mukim Tualang Langgar Kedah 06500 Malaysia Langgar Kedah 06500 Malaysia</span>
+              </div>
+              <div class="external-event bg-fuchsia">
+                <span class="title">Delivery @ 2:30PM</span><br>
+                <span class="description">2 10 Lrg Medan Tuanku 1 50300 Wilayah Persekutuan 50300 Malaysia 50300 Malaysia</span>
+              </div>
+              <div class="external-event bg-aqua">
+                <span class="title">Pick Up @ 3PM - 4PM</span><br>
+                <span class="description">1147A Jln Seberang Perak 05400 Alor Setar Kedah Alor Setar Kedah 05400 Malaysia</span>
+              </div>
               <div class="checkbox">
                 <label for="drop-remove">
                   <input type="checkbox" id="drop-remove" checked>
@@ -37,42 +56,7 @@ include('header.php'); ?>
           </div>
           <!-- /.box-body -->
         </div>
-        <!-- /. box -->
-        <div class="box box-solid">
-          <div class="box-header with-border">
-            <h3 class="box-title">Create Event</h3>
-          </div>
-          <div class="box-body">
-            <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
-              <!--<button type="button" id="color-chooser-btn" class="btn btn-info btn-block dropdown-toggle" data-toggle="dropdown">Color <span class="caret"></span></button>-->
-              <ul class="fc-color-picker" id="color-chooser">
-                <li><a class="text-aqua" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-blue" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-light-blue" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-teal" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-yellow" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-orange" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-green" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-lime" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-red" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-purple" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-fuchsia" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-muted" href="#"><i class="fa fa-square"></i></a></li>
-                <li><a class="text-navy" href="#"><i class="fa fa-square"></i></a></li>
-              </ul>
-            </div>
-            <!-- /btn-group -->
-            <div class="input-group">
-              <input id="new-event" type="text" class="form-control" placeholder="Event Title">
 
-              <div class="input-group-btn">
-                <button id="add-new-event" type="button" class="btn btn-primary btn-flat">Add</button>
-              </div>
-              <!-- /btn-group -->
-            </div>
-            <!-- /input-group -->
-          </div>
-        </div>
       </div>
       <!-- /.col -->
       <div class="col-md-9">
@@ -111,7 +95,8 @@ include('header.php'); ?>
         // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
         // it doesn't need to have a start or end
         var eventObject = {
-          title: $.trim($(this).text()) // use the element's text as the event title
+          title: $.trim($(this).find('.title').text()), // use the element's text as the event title
+          description: $.trim($(this).find('.description').text())
         };
 
         // store the Event Object in the DOM element so we can get to it later
@@ -155,58 +140,15 @@ include('header.php'); ?>
         { id: 'a', title: 'Driver A \n John Doe' },
         { id: 'b', title: 'Driver B \n Peter Adam' },
         { id: 'c', title: 'Driver C \n Charlie Dexter' },
-        { id: 'd', title: 'Driver D \n Fur Elise' }
+        { id: 'd', title: 'Driver D \n Edward Nigma' }
       ],
-      //Random default events
-      events: [
-        {
-          title: 'All Day Event',
-          start: new Date(y, m, 1),
-          backgroundColor: "#f56954", //red
-          borderColor: "#f56954" //red
-        },
-        {
-          title: 'Long Event',
-          start: new Date(y, m, d - 5),
-          end: new Date(y, m, d - 2),
-          backgroundColor: "#f39c12", //yellow
-          borderColor: "#f39c12" //yellow
-        },
-        {
-          title: 'Meeting',
-          start: new Date(y, m, d, 10, 30),
-          allDay: false,
-          backgroundColor: "#0073b7", //Blue
-          borderColor: "#0073b7" //Blue
-        },
-        {
-          title: 'Lunch',
-          start: new Date(y, m, d, 12, 0),
-          end: new Date(y, m, d, 14, 0),
-          allDay: false,
-          backgroundColor: "#00c0ef", //Info (aqua)
-          borderColor: "#00c0ef" //Info (aqua)
-        },
-        {
-          title: 'Birthday Party',
-          start: new Date(y, m, d + 1, 19, 0),
-          end: new Date(y, m, d + 1, 22, 30),
-          allDay: false,
-          backgroundColor: "#00a65a", //Success (green)
-          borderColor: "#00a65a" //Success (green)
-        },
-        {
-          title: 'Click for Google',
-          start: new Date(y, m, 28),
-          end: new Date(y, m, 29),
-          url: 'http://google.com/',
-          backgroundColor: "#3c8dbc", //Primary (light-blue)
-          borderColor: "#3c8dbc" //Primary (light-blue)
-        }
-      ],
+      eventRender: function(event, element) {
+        element.find(".fc-content").append(" (" + event.description + ")");
+
+      },
       editable: true,
       droppable: true, // this allows things to be dropped onto the calendar !!!
-      drop: function (date, allDay) { // this function is called when something is dropped
+      drop: function (date, allDay, ui, resourceId) { // this function is called when something is dropped
 
         // retrieve the dropped element's stored Event Object
         var originalEventObject = $(this).data('eventObject');
@@ -219,6 +161,7 @@ include('header.php'); ?>
         copiedEventObject.allDay = allDay;
         copiedEventObject.backgroundColor = $(this).css("background-color");
         copiedEventObject.borderColor = $(this).css("border-color");
+        copiedEventObject.resourceId = resourceId;
 
         // render the event on the calendar
         // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
