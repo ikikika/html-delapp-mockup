@@ -22,14 +22,14 @@ include('header.php'); ?>
           <div class="box-body">
             <!-- the events -->
             <div id="external-events">
-              <div class="external-event bg-green">Lunch</div>
-              <div class="external-event bg-yellow">Go home</div>
-              <div class="external-event bg-aqua">Do homework</div>
-              <div class="external-event bg-light-blue">Work on UI design</div>
-              <div class="external-event bg-red">Sleep tight</div>
+              <div class="external-event bg-green">Pick Up @ 8AM-9AM</div>
+              <div class="external-event bg-yellow">Drop Off</div>
+              <div class="external-event bg-aqua">Pick Up @ 12PM - 1PM</div>
+              <div class="external-event bg-light-blue">Delivery @ 2:30PM</div>
+              <div class="external-event bg-red">Pick Up @ 3PM - 4PM</div>
               <div class="checkbox">
                 <label for="drop-remove">
-                  <input type="checkbox" id="drop-remove">
+                  <input type="checkbox" id="drop-remove" checked>
                   remove after drop
                 </label>
               </div>
