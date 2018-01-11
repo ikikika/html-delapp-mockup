@@ -130,7 +130,10 @@ include('nav.php');
                       </tr>
                     </table>
                   </td>
-                  <td >Completed</td>
+                  <td>
+                    Completed <br>
+                    <a href="../user/invoice-file.php" target="_blank">Invoice</a>
+                  </td>
                   <td>
                     <a href="orders_manage.php" class="btn btn-warning"><i class="fa fa-edit"></i></a>
                   </td>

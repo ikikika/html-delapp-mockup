@@ -49,6 +49,12 @@
         </a>
       </li>
 
+      <li class="<?= $title == "Invoices" ? "active" : "" ?>">
+        <a href="invoices.php">
+          <i class="fa fa-file-text-o"></i> <span>Invoices</span>
+        </a>
+      </li>
+
     </ul>
   </section>
   <!-- /.sidebar -->
