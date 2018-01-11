@@ -1,8 +1,10 @@
 <?php
-$title = "Packages";
-include('header.php'); ?>
-
-<?php include('nav.php'); ?>
+include("_companies.php");
+include("_packages.php");
+$title = $companies[$_GET['c']][0]." Packages";
+include('header.php');
+$title = "Companies";
+include('nav.php'); ?>
 
 <!-- DataTables -->
 <link rel="stylesheet" href="plugins/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
@@ -13,11 +15,11 @@ include('header.php'); ?>
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Users
+      <?= $companies[$_GET['c']][0]." Packages" ?>
       <small></small>
     </h1>
     <br>
-    <a href="packages_form.php?a=Create" class="btn btn-info">Create New Package</a>
+    <a href="packages_form.php?a=Create" class="btn btn-success">Create New Package for <?= $companies[$_GET['c']][0] ?></a>
   </section>
 
 
@@ -44,13 +46,13 @@ include('header.php'); ?>
               </tr>
               </thead>
               <tbody>
-
+                <?php for($i=0; $i<$_GET['p']; $i++){ ?>
                 <tr>
-                  <td>1</td>
-                  <td>Box</td>
-                  <td>Charge by box</td>
-                  <td>box</td>
-                  <td>XX</td>
+                  <td><?= $i+1 ?></td>
+                  <td><?= $packages[$i][0] ?></td>
+                  <td><?= $packages[$i][1] ?></td>
+                  <td><?= $packages[$i][2] ?></td>
+                  <td><?= $packages[$i][3] ?></td>
                   <td>
                     <a href="packages_form.php?a=Edit" class="btn btn-warning" title="Edit">
                       <i class="fa fa-edit"></i>
@@ -60,54 +62,8 @@ include('header.php'); ?>
                     </button>
                   </td>
                 </tr>
+                <?php } ?>
 
-                <tr>
-                  <td>2</td>
-                  <td>Pallet</td>
-                  <td>Charge by pallet</td>
-                  <td>pallet</td>
-                  <td>YY</td>
-                  <td>
-                    <a href="packages_form.php?a=Edit" class="btn btn-warning" title="Edit">
-                      <i class="fa fa-edit"></i>
-                    </a>
-                    <button class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>3</td>
-                  <td>Tons</td>
-                  <td>Charge by tons</td>
-                  <td>ton</td>
-                  <td>ZZ</td>
-                  <td>
-                    <a href="packages_form.php?a=Edit" class="btn btn-warning" title="Edit">
-                      <i class="fa fa-edit"></i>
-                    </a>
-                    <button class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>4</td>
-                  <td>Loose Parcel</td>
-                  <td>Charge by parcel</td>
-                  <td>parcel</td>
-                  <td>WW</td>
-                  <td>
-                    <a href="packages_form.php?a=Edit" class="btn btn-warning" title="Edit">
-                      <i class="fa fa-edit"></i>
-                    </a>
-                    <button class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>
 
               </tbody>
 

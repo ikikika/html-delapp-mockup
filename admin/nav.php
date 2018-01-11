@@ -37,12 +37,6 @@
         </a>
       </li>
 
-      <li class="<?= $title == "Packages" ? "active" : "" ?>">
-        <a href="packages.php">
-          <i class="fa fa-cubes"></i> <span>Packages</span>
-        </a>
-      </li>
-
       <li class="<?= $title == "Calendar" ? "active" : "" ?>">
         <a href="calendar.php">
           <i class="fa fa-calendar"></i> <span>Calendar</span>

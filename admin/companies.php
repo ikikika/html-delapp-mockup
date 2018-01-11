@@ -49,7 +49,7 @@ include('header.php'); ?>
                 <?php
 
                 function generateRandomNo($length = 10) {
-                      $characters = '123456789';
+                      $characters = '123456';
                       $charactersLength = strlen($characters);
                       $randomString = '';
                       for ($i = 0; $i < $length; $i++) {
@@ -61,6 +61,7 @@ include('header.php'); ?>
                   include("_companies.php");
 
                   for($i=1; $i<sizeof($companies);$i++){
+                    $p = generateRandomNo(1);
                 ?>
                 <tr>
                   <td><?= $i ?></td>
@@ -74,8 +75,8 @@ include('header.php'); ?>
                     </a>
                   </td>
                   <td>
-                    <a href="companies_form.php?a=Edit" class="btn btn-info" title="<?= $companies[$i][4] ?> users">
-                      <?= generateRandomNo(1) ?>
+                    <a href="packages.php?c=<?= $i-1 ?>&p=<?= $p ?>" class="btn btn-info" title="<?= $companies[$i][4] ?> packages">
+                      <?= $p ?>
                     </a>
                   </td>
                   <td>
