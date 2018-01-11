@@ -12,6 +12,7 @@ include('header.php'); ?>
 .external-event .description{
   font-weight:normal !important;
 }
+
 </style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -150,7 +151,9 @@ include('header.php'); ?>
     var d = date.getDate(),
         m = date.getMonth(),
         y = date.getFullYear();
+
     $('#calendar').fullCalendar({
+      contentHeight: 'auto',
       schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
       header: {
         left: 'prev,next today',
@@ -242,7 +245,22 @@ include('header.php'); ?>
       //Remove event from text input
       $("#new-event").val("");
     });
+
+    // if(calendar){
+    //
+    //     var calHeight = $(window).height()*0.83;
+    //     $('#calendar').fullCalendar('option', 'height', calHeight);
+    //
+    // }
+    var newheight = ( $(window).height() - 250 ) / 48;
+    console.log( newheight );
+    $(".fc-axis.fc-time.fc-widget-content").css("font-size", (newheight/2)+"px");
+    $(".fc-time-grid .fc-slats td").css('height', newheight);
+
+
+
   });
+
 
 </script>
 <!-- end js -->
