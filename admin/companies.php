@@ -37,38 +37,40 @@ include('header.php'); ?>
               <tr>
                 <th>ID</th>
                 <th>Company Name</th>
+                <th></th>
                 <th>GST Registration No.</th>
                 <th>Telephone</th>
                 <th>Contact Person</th>
                 <th>Users</th>
                 <th>Packages</th>
+                <th>Status</th>
                 <th>Actions</th>
               </tr>
               </thead>
               <tbody>
                 <?php
 
-                function generateRandomNo($length = 10) {
-                      $characters = '123456';
-                      $charactersLength = strlen($characters);
-                      $randomString = '';
-                      for ($i = 0; $i < $length; $i++) {
-                          $randomString .= $characters[rand(0, $charactersLength - 1)];
-                      }
-                      return $randomString;
-                  }
-
                   include("_companies.php");
 
                   for($i=1; $i<sizeof($companies);$i++){
-                    $p = generateRandomNo(1);
+                    $p = rand(1,6)
                 ?>
                 <tr>
                   <td><?= $i ?></td>
                   <td><?= $companies[$i][0] ?></td>
+                  <td>
+                    <?php
+                      $warn = rand(0,1);
+                    ?>
+                    <button <?= $warn == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger warningsent" id="warningsent<?= $i ?>" title="Click to unsend warning">Warning sent</button>
+
+                    <button <?= $warn == 0 ? 'style="display:none;"' : '' ?> class="btn btn-default sendwarning" id="sendwarning<?= $i ?>" title="Click to send warning">Send warning</button>
+
+                  </td>
                   <td><?= $companies[$i][1] ?></td>
                   <td><?= $companies[$i][2] ?></td>
                   <td><?= $companies[$i][3] ?></td>
+
                   <td>
                     <a href="company_users.php?c=<?= $i-1 ?>&u=<?= $companies[$i][4] ?>" class="btn btn-primary" title="<?= $companies[$i][4] ?> users">
                       <?= $companies[$i][4] ?>
@@ -79,6 +81,7 @@ include('header.php'); ?>
                       <?= $p ?>
                     </a>
                   </td>
+                  <td></td>
                   <td>
 
                     <a href="companies_form.php?a=Edit&c=<?= $i-1 ?>" class="btn btn-warning">
@@ -115,16 +118,23 @@ include('header.php'); ?>
 <script src="plugins/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script>
   $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-  })
+    $('#example1').DataTable();
+
+    $(".warningsent").click(function(){
+      $(this).hide();
+      var id = $(this).attr("id").replace("warningsent", "");
+      $("#sendwarning"+id  ).show();
+    });
+
+    $(".sendwarning").click(function(){
+      var confirm = window.confirm("Confirm send warning?");
+      if( confirm ){
+        $(this).hide();
+        $("#warningsent"+ $(this).attr("id").replace("sendwarning", "")).show();
+      }
+    });
+
+  });
 </script>
 <!-- end js -->
 
