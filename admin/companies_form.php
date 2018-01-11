@@ -6,7 +6,11 @@ include('header.php');
 
 $title = "Companies";
 
-include('nav.php'); ?>
+include('nav.php');
+
+include("_companies.php");
+$c = $_GET['c'];
+ ?>
 
 <!-- DataTables -->
 <link rel="stylesheet" href="plugins/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
@@ -20,10 +24,7 @@ include('nav.php'); ?>
       <?= $a ?> Company
       <small></small>
     </h1>
-
   </section>
-
-
 
   <!-- Main content -->
   <section class="content">
@@ -41,12 +42,12 @@ include('nav.php'); ?>
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Company Name</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? 'ABC Company' : '' ?>">
+                  <input type="text" class="form-control" value="<?= $a == 'Edit'? $companies[$c][0] : '' ?>">
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">GST Registration</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '324324' : '' ?>">
+                  <input type="text" class="form-control" value="<?= $a == 'Edit'? $companies[$c][1] : '' ?>">
                 </div>
 
                 <div class="form-group">
@@ -56,7 +57,7 @@ include('nav.php'); ?>
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Telephone No</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '4234' : '' ?>">
+                  <input type="text" class="form-control" value="<?= $a == 'Edit'? $companies[$c][2] : '' ?>">
                 </div>
 
                 <div class="form-group">
@@ -66,7 +67,7 @@ include('nav.php'); ?>
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Contact Person</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? 'John Adam' : '' ?>">
+                  <input type="text" class="form-control" value="<?= $a == 'Edit'? $companies[$c][3] : '' ?>">
                 </div>
 
                 <div class="form-group">
