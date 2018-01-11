@@ -38,7 +38,7 @@ include('header.php'); ?>
                 <th>ID</th>
                 <th>Company Name</th>
                 <th></th>
-                <th>GST Registration No.</th>
+                <th>GST Reg No.</th>
                 <th>Telephone</th>
                 <th>Contact Person</th>
                 <th>Users</th>
@@ -63,9 +63,7 @@ include('header.php'); ?>
                       $warn = rand(0,1);
                     ?>
                     <button <?= $warn == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger warningsent" id="warningsent<?= $i ?>" title="Click to unsend warning">Warning sent</button>
-
                     <button <?= $warn == 0 ? 'style="display:none;"' : '' ?> class="btn btn-default sendwarning" id="sendwarning<?= $i ?>" title="Click to send warning">Send warning</button>
-
                   </td>
                   <td><?= $companies[$i][1] ?></td>
                   <td><?= $companies[$i][2] ?></td>
@@ -81,7 +79,13 @@ include('header.php'); ?>
                       <?= $p ?>
                     </a>
                   </td>
-                  <td></td>
+                  <td>
+                    <?php
+                      $active = rand(0,1);
+                    ?>
+                    <button <?= $active == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger active" id="active<?= $i ?>" title="Click to change to active">Inactive</button>
+                    <button <?= $active == 0 ? 'style="display:none;"' : '' ?> class="btn btn-success inactive" id="inactive<?= $i ?>" title="Click to change to inactive">Active</button>
+                  </td>
                   <td>
 
                     <a href="companies_form.php?a=Edit&c=<?= $i-1 ?>" class="btn btn-warning">
@@ -131,6 +135,20 @@ include('header.php'); ?>
       if( confirm ){
         $(this).hide();
         $("#warningsent"+ $(this).attr("id").replace("sendwarning", "")).show();
+      }
+    });
+
+    $(".active").click(function(){
+      $(this).hide();
+      var id = $(this).attr("id").replace("active", "");
+      $("#inactive"+id  ).show();
+    });
+
+    $(".inactive").click(function(){
+      var confirm = window.confirm("Confirm inactive?");
+      if( confirm ){
+        $(this).hide();
+        $("#active"+ $(this).attr("id").replace("inactive", "")).show();
       }
     });
 
