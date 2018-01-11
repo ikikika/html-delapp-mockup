@@ -7,32 +7,30 @@ include("header.php"); ?>
     <article class="main__content content">
       <h4>Login Information</h4>
       <div class="content__wrapper">
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Username" disabled/>
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Password" />
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Confirm Password" />
+        <input class="textfield textfield--shadow" placeholder="Username" disabled/>
+        <input class="textfield textfield--shadow" placeholder="Password" />
+        <input class="textfield textfield--shadow" placeholder="Confirm Password" />
         <button class="button button--blue">Submit</button>
       </div>
 
-      <h4>Corporate Details</h4>
+      <h4>User Details</h4>
       <div class="content__wrapper">
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Company Name" />
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Company No" />
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="GST Registration No" />
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Address" />
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Telephone No" />
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Fax No" />
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Contact Person" />
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Email Address" />
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Factory Address" />
-        <input class="radio" type="radio" id="radio-1" name="radio"/>
-        <label for="radio-1">Set Factory Address as default pick up address</label>
-        <input class="textfield textfield--shadow" id="textfield-2" placeholder="Billing Address" />
-        <input class="radio" type="radio" id="radio-2" name="radio"/>
-        <label for="radio-2">Set Billing Address as default pick up address</label>
+        Code: <input value="89f4jj" disabled/>
+        <input class="textfield textfield--shadow" placeholder="Company Name" value="ABC Company" disabled/>
+        <input class="textfield textfield--shadow" placeholder="Full Name" />
+        <input class="textfield textfield--shadow" placeholder="Address #1" />
+        <input class="textfield textfield--shadow" placeholder="Address #2" />
+        <input class="textfield textfield--shadow" placeholder="Address #3" />
+        <input class="textfield textfield--shadow" placeholder="Postal Code" />
+        <input class="textfield textfield--shadow" placeholder="Email Address" />
+        <input class="textfield textfield--shadow" placeholder="Factory Address" />
+
+        <input class="textfield textfield--shadow" placeholder="Billing Address" />
+
         <button class="button button--blue">Submit</button>
       </div>
 
-      
+
     </article>
   <?php include("footer.php"); ?>
 
