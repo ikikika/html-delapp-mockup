@@ -5,6 +5,9 @@ include("header.php"); ?>
 
 <?php include("nav.php"); ?>
 
+<link rel="stylesheet" href="css/timeline.css">
+<link rel="stylesheet" href="css/modal.css">
+
 <article class="main__content content">
 
   <div class="content__wrapper">
@@ -105,7 +108,15 @@ include("header.php"); ?>
   </div>
 
 
-
+  <!-- The Modal -->
+  <div id="myModal" class="modal" style="z-index:100;">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Message</h1>
+      <p>Lorem ipsum dolor sit amet. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+    </div>
+  </div>
 
 
 
@@ -115,6 +126,28 @@ include("header.php"); ?>
 
 <!-- js here -->
 
+<script>
+  $(document).ready(function(){
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    <?php if( $_GET['warning'] ){ ?>
+    modal.style.display = "block";
+    <?php } ?>
+
+    $(".close").click(function() {
+        modal.style.display = "none";
+    });
+
+    $(this).click(function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+
+  });
+</script>
 
 <!-- end js -->
 
