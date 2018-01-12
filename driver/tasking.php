@@ -37,12 +37,20 @@ include("header.php"); ?>
         <input type="file">
       </div>
       <br><br>
+      <img src="images/package.jpg" style="width:80px;">
+      <img src="images/package.jpg" style="width:80px;">
+      <img src="images/package.jpg" style="width:80px;">
+      <br><br>
       <div class="form__group">
         <div class="form__label">
           Document :
         </div>
         <input type="file">
       </div>
+      <br><br>
+      <img src="images/deliveryorder.jpg" style="width:80px;">
+      <img src="images/deliveryorder.jpg" style="width:80px;">
+
       <br><br>
       <a href="" class="button button--radius button--red">Complete Task</a>
     </div>
