@@ -25,7 +25,7 @@ include("header.php"); ?>
       <h3>Started at <?= date('h:i:s a') ?></h3>
 
       <h4>Order: XXXXMMDD001 </h4>
-      <h4>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></h4>
+      <h4>Address:</h4> <input type="text" value="93 Jln Segamat Batu 5 85010 Buloh Kasap 85010 Malaysia Segamat Johor 85010 Malaysia" id="myInput">  <button id="copybutton" onclick="myFunction()">Copy text</button>
       <h4>Contact: John Doe</h4>
       <h4>Tel: 123-456-789</h4>
       <h4>Package: 2 boxes</h4>
@@ -53,7 +53,22 @@ include("header.php"); ?>
 <?php include("footer.php"); ?>
 
 <!-- js here -->
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
 
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("Copy");
+
+  /* Alert the copied text */
+  document.getElementById("copybutton").innerHTML = "Copied!";
+}
+
+</script>
 
 <!-- end js -->
 
