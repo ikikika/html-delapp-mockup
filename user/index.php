@@ -113,8 +113,11 @@ include("header.php"); ?>
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h1>Message</h1>
-      <p>Lorem ipsum dolor sit amet. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+      <h1>Payment reminder</h1>
+      <p>Dear customer,</p>
+      <p>your account is overdue.</p>
+      <p>Please kindly settle the payment to avoid service interruptions.</p>
+      <p>For more information, please contact 213-32-123.</p>
     </div>
   </div>
 
