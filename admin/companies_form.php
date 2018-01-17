@@ -12,10 +12,15 @@ include("_companies.php");
 $c = $_GET['c'];
  ?>
 <style>
-.add-block{
+.plr15mg15{
   padding:0px 15px;
-  border:1px solid #000;
   margin-bottom: 15px;
+}
+.b1pxblack{
+  border:1px solid #A9A9A9;
+}
+#paymentterms{
+  font-weight:bold;
 }
 </style>
 <!-- DataTables -->
@@ -46,7 +51,6 @@ $c = $_GET['c'];
             <form role="form">
               <div class="box-body">
 
-
                 <div class="form-group">
                   <div class="radio">
                     <label>
@@ -59,6 +63,22 @@ $c = $_GET['c'];
                       <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
                       Inactive
                     </label>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Payment Term (Days)</label>
+                  <input type="number" class="form-control" value="" id="paymentterminput">
+                </div>
+
+                <div class="form-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox">
+                      Automatically Inactivate customer <span id="paymentterms"></span> days after payment reminder sent
+                    </label>
+                    <span class="help-block">If this is not checked, admin will have to manually inactivate customer.</span>
                   </div>
                 </div>
 
@@ -87,14 +107,14 @@ $c = $_GET['c'];
                   <label for="exampleInputEmail1">GST Registration</label>
                   <div class="input-group">
                         <span class="input-group-addon">
-                          <input type="checkbox">
+                          <input type="checkbox" class="gstreg">
                         </span>
                     <input type="text" class="form-control gstregno" disabled>
                   </div>
                 </div>
 
 
-                <div class="row add-block">
+                <div class="row plr15mg15 b1pxblack">
                   <p style="font-weight:700;">Customer Registered Address</p>
                   <div class="form-group">
                     Street No, Street Name, Unit No
@@ -179,7 +199,7 @@ $c = $_GET['c'];
                 </div>
 
                 <?php for( $i=1;$i<6;$i++ ){ ?>
-                <div class="row add-block" >
+                <div class="row plr15mg15 b1pxblack" >
                   <p style="font-weight:700;">Pick up address #<?= $i ?></p>
                   <div class="form-group">
                     Street No, Street Name, Unit No
@@ -233,7 +253,7 @@ $c = $_GET['c'];
 
 
 
-              <div class="row add-block" >
+              <div class="row plr15mg15 b1pxblack" >
                 <p style="font-weight:700;">Billing Address</p>
                 <div class="form-group">
                   Street No, Street Name, Unit No
@@ -315,14 +335,26 @@ $c = $_GET['c'];
   $(function () {
     $('#example1').DataTable();
 
-    $('input[type=checkbox]').click(function(){
-      if($('input[type=checkbox]').is(':')) {
+    $('.gstreg').click(function(){
+      if($('.gstreg').is(':checked')) {
           $(this).prop('',true);
           $(".gstregno").prop('disabled',false);
       } else {
           $(this).prop('',false);
           $(".gstregno").prop('disabled',true);
       }
+    });
+
+    if( $("#paymentterminput").val() == "" ){
+      $("#paymentterms").html(0);
+    }
+
+    $("#paymentterminput").keyup(function(){
+      var x = $(this).val();
+      if( x == "" ){
+        x = 0;
+      }
+      $("#paymentterms").html(x);
     });
 
   });
