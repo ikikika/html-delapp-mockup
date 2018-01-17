@@ -18,12 +18,12 @@ include("header.php"); ?>
         Code: <input value="89f4jj" disabled/>
         <input class="textfield textfield--shadow" placeholder="Company Name" value="ABC Company" disabled/>
         <input class="textfield textfield--shadow" placeholder="Full Name" />
-        <input class="textfield textfield--shadow" placeholder="Address #1" />
+        <!-- <input class="textfield textfield--shadow" placeholder="Address #1" />
         <input class="textfield textfield--shadow" placeholder="Address #2" />
         <input class="textfield textfield--shadow" placeholder="Address #3" />
         <input class="textfield textfield--shadow" placeholder="Postal Code" />
         <input class="textfield textfield--shadow" placeholder="Email Address" />
-        <input class="textfield textfield--shadow" placeholder="Factory Address" />
+        <input class="textfield textfield--shadow" placeholder="Factory Address" /> -->
 
         <input class="textfield textfield--shadow" placeholder="Billing Address" />
 
