@@ -72,8 +72,45 @@ $c = $_GET['c'];
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Address</label>
+                  <label for="exampleInputEmail1">Customer Registered Address</label>
                   <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Postal Code</label>
+                      <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">City</label>
+                      <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">State</label>
+                      <select class="form-control">
+                        <option>Select State</option>
+                        <option>Penang</option>
+                        <option>Federal Territories</option>
+                        <option>Perak</option>
+                        <option>Sarawak</option>
+                        <option>Johor</option>
+                        <option>Sabah</option>
+                        <option>Selangor</option>
+                        <option>Melaka</option>
+                        <option>Kedah</option>
+                        <option>Sarawak</option>
+                        <option>Selangor</option>
+                        <option>Terengganu</option>
+                        <option>Johor</option>
+                        <option>Negeri Sembilan</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="form-group">
