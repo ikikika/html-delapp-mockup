@@ -63,7 +63,12 @@ $c = $_GET['c'];
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">GST Registration</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? $companies[$c][1] : '' ?>">
+                  <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="checkbox">
+                        </span>
+                    <input type="text" class="form-control gstregno" disabled>
+                  </div>
                 </div>
 
                 <div class="form-group">
@@ -162,16 +167,19 @@ $c = $_GET['c'];
 <script src="plugins/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script>
   $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-  })
+    $('#example1').DataTable();
+
+    $('input[type=checkbox]').click(function(){
+      if($('input[type=checkbox]').is(':checked')) {
+          $(this).prop('checked',true);
+          $(".gstregno").prop('disabled',false);
+      } else {
+          $(this).prop('checked',false);
+          $(".gstregno").prop('disabled',true);
+      }
+    });
+
+  });
 </script>
 <!-- end js -->
 
