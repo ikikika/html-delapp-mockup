@@ -2,7 +2,7 @@
 include("_companies.php");
 $title = $companies[$_GET['c']][0]." Users";
 include('header.php');
-$title = "Companies";
+$title = "Customer";
 include('nav.php');
 ?>
 

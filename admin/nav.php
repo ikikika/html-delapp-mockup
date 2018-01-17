@@ -13,9 +13,9 @@
         </a>
       </li>
 
-      <li class="<?= $title == "Companies" ? "active" : "" ?>">
+      <li class="<?= $title == "Customer" ? "active" : "" ?>">
         <a href="companies.php">
-          <i class="fa fa-building"></i> <span>Companies</span>
+          <i class="fa fa-building"></i> <span>Customer</span>
         </a>
       </li>
 

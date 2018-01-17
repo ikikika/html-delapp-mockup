@@ -4,7 +4,7 @@ $a = $_GET['a'];
 $title = $a." Company";
 include('header.php');
 
-$title = "Companies";
+$title = "Customer";
 
 include('nav.php');
 

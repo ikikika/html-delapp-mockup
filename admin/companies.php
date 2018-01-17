@@ -1,5 +1,5 @@
 <?php
-$title = "Companies";
+$title = "Customer";
 include('header.php'); ?>
 
 <?php include('nav.php'); ?>
@@ -13,11 +13,11 @@ include('header.php'); ?>
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Companies
+      Customer
       <small></small>
     </h1>
     <br>
-    <a href="companies_form.php?a=Create" class="btn btn-success">Create New Company</a>
+    <a href="companies_form.php?a=Create" class="btn btn-success">Create New Customer</a>
   </section>
 
 
@@ -36,7 +36,7 @@ include('header.php'); ?>
               <thead>
               <tr>
                 <th>ID</th>
-                <th>Company Name</th>
+                <th>Customer Name</th>
                 <th></th>
                 <th>GST Reg No.</th>
                 <th>Telephone</th>
