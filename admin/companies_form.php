@@ -11,7 +11,13 @@ include('nav.php');
 include("_companies.php");
 $c = $_GET['c'];
  ?>
-
+<style>
+.add-block{
+  padding:0px 15px;
+  border:1px solid #000;
+  margin-bottom: 15px;
+}
+</style>
 <!-- DataTables -->
 <link rel="stylesheet" href="plugins/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
@@ -39,6 +45,7 @@ $c = $_GET['c'];
 
             <form role="form">
               <div class="box-body">
+
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Customer Name</label>
@@ -71,47 +78,52 @@ $c = $_GET['c'];
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Customer Registered Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+
+                <div class="row add-block">
+                  <p style="font-weight:700;">Customer Registered Address</p>
+                  <div class="form-group">
+                    Street No, Street Name, Unit No
+                    <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        Postal Code
+                        <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        City
+                        <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        State
+                        <select class="form-control">
+                          <option>Select State</option>
+                          <option>Penang</option>
+                          <option>Federal Territories</option>
+                          <option>Perak</option>
+                          <option>Sarawak</option>
+                          <option>Johor</option>
+                          <option>Sabah</option>
+                          <option>Selangor</option>
+                          <option>Melaka</option>
+                          <option>Kedah</option>
+                          <option>Sarawak</option>
+                          <option>Selangor</option>
+                          <option>Terengganu</option>
+                          <option>Johor</option>
+                          <option>Negeri Sembilan</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Postal Code</label>
-                      <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">City</label>
-                      <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">State</label>
-                      <select class="form-control">
-                        <option>Select State</option>
-                        <option>Penang</option>
-                        <option>Federal Territories</option>
-                        <option>Perak</option>
-                        <option>Sarawak</option>
-                        <option>Johor</option>
-                        <option>Sabah</option>
-                        <option>Selangor</option>
-                        <option>Melaka</option>
-                        <option>Kedah</option>
-                        <option>Sarawak</option>
-                        <option>Selangor</option>
-                        <option>Terengganu</option>
-                        <option>Johor</option>
-                        <option>Negeri Sembilan</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Telephone No</label>
@@ -151,29 +163,111 @@ $c = $_GET['c'];
                   <input type="text" class="form-control" value="<?= $a == 'Edit'? '132432' : '' ?>">
                 </div>
 
+                <?php for( $i=1;$i<6;$i++ ){ ?>
+                <div class="row add-block" >
+                  <p style="font-weight:700;">Pick up address #<?= $i ?></p>
+                  <div class="form-group">
+                    Street No, Street Name, Unit No
+                    <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        Postal Code
+                        <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        City
+                        <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        State
+                        <select class="form-control">
+                          <option>Select State</option>
+                          <option>Penang</option>
+                          <option>Federal Territories</option>
+                          <option>Perak</option>
+                          <option>Sarawak</option>
+                          <option>Johor</option>
+                          <option>Sabah</option>
+                          <option>Selangor</option>
+                          <option>Melaka</option>
+                          <option>Kedah</option>
+                          <option>Sarawak</option>
+                          <option>Selangor</option>
+                          <option>Terengganu</option>
+                          <option>Johor</option>
+                          <option>Negeri Sembilan</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios"  value="option1" >
+                      Set Address <?= $i ?> as default pickup address
+                    </label>
+                  </div>
+                </div>
+              <?php } ?>
+
+
+
+              <div class="row add-block" >
+                <p style="font-weight:700;">Billing Address</p>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Factory Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '43 FInally Valley' : '' ?>">
+                  Street No, Street Name, Unit No
+                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      Postal Code
+                      <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      City
+                      <input type="text" class="form-control" value="<?= $a == 'Edit'? '123 QEWER Street' : '' ?>">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      State
+                      <select class="form-control">
+                        <option>Select State</option>
+                        <option>Penang</option>
+                        <option>Federal Territories</option>
+                        <option>Perak</option>
+                        <option>Sarawak</option>
+                        <option>Johor</option>
+                        <option>Sabah</option>
+                        <option>Selangor</option>
+                        <option>Melaka</option>
+                        <option>Kedah</option>
+                        <option>Sarawak</option>
+                        <option>Selangor</option>
+                        <option>Terengganu</option>
+                        <option>Johor</option>
+                        <option>Negeri Sembilan</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                    Set Factory Address as default pickup address
+                    <input type="radio" name="optionsRadios" value="option1" >
+                    Set BIlling Address as default pickup address
                   </label>
                 </div>
-
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Billing Address</label>
-                  <input type="text" class="form-control" value="<?= $a == 'Edit'? '23 Real Road' : '' ?>">
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    Set Billing Address as default pickup address
-                  </label>
-                </div>
-
+              </div>
 
 
               </div>
@@ -207,11 +301,11 @@ $c = $_GET['c'];
     $('#example1').DataTable();
 
     $('input[type=checkbox]').click(function(){
-      if($('input[type=checkbox]').is(':checked')) {
-          $(this).prop('checked',true);
+      if($('input[type=checkbox]').is(':')) {
+          $(this).prop('',true);
           $(".gstregno").prop('disabled',false);
       } else {
-          $(this).prop('checked',false);
+          $(this).prop('',false);
           $(".gstregno").prop('disabled',true);
       }
     });
