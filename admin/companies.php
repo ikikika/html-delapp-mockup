@@ -61,9 +61,10 @@ include('header.php'); ?>
                   <td><?= $companies[$i][0] ?></td>
                   <td>
                     <?php
-                      $warn = rand(0,1);
+                      //$warn = rand(0,1);
+                      $warn = 1;
                     ?>
-                    <button <?= $warn == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger warningsent" id="warningsent<?= $i ?>" title="Click to unsend warning">Overdue Reminder</button>
+                    <button <?= $warn == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger warningsent" id="warningsent<?= $i ?>" title="Click to unsend warning">Reminder Sent <br><?= date('d M Y') ?></button>
                     <button <?= $warn == 0 ? 'style="display:none;"' : '' ?> class="btn btn-default sendwarning" id="sendwarning<?= $i ?>" title="Click to send warning">Send Reminder</button>
                   </td>
                   <td><?= $companies[$i][5] ?></td>
@@ -83,8 +84,10 @@ include('header.php'); ?>
                   </td>
                   <td>
                     <?php
-                      $active = rand(0,1);
+                      //$active = rand(0,1);
+                      $active = 1;
                     ?>
+                    <p class="inactiveon" style="display:none;">Inactive on <?= date('d M Y', strtotime(' + 10 days')); ?></p>
                     <button <?= $active == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger active" id="active<?= $i ?>" title="Click to change to active">Inactive</button>
                     <button <?= $active == 0 ? 'style="display:none;"' : '' ?> class="btn btn-success inactive" id="inactive<?= $i ?>" title="Click to change to inactive">Active</button>
                   </td>
@@ -137,6 +140,7 @@ include('header.php'); ?>
       if( confirm ){
         $(this).hide();
         $("#warningsent"+ $(this).attr("id").replace("sendwarning", "")).show();
+        $(this).parent().parent().find(".inactiveon").show();
       }
     });
 
