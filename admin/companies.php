@@ -38,6 +38,7 @@ include('header.php'); ?>
                 <th>ID</th>
                 <th>Customer Name</th>
                 <th></th>
+                <th>Customer Code</th>
                 <th>GST Reg No.</th>
                 <th>Telephone</th>
                 <th>Contact Person</th>
@@ -65,6 +66,7 @@ include('header.php'); ?>
                     <button <?= $warn == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger warningsent" id="warningsent<?= $i ?>" title="Click to unsend warning">Overdue Reminder</button>
                     <button <?= $warn == 0 ? 'style="display:none;"' : '' ?> class="btn btn-default sendwarning" id="sendwarning<?= $i ?>" title="Click to send warning">Send Reminder</button>
                   </td>
+                  <td><?= $companies[$i][5] ?></td>
                   <td><?= $companies[$i][1] ?></td>
                   <td><?= $companies[$i][2] ?></td>
                   <td><?= $companies[$i][3] ?></td>

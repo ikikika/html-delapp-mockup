@@ -41,8 +41,24 @@ $c = $_GET['c'];
               <div class="box-body">
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Company Name</label>
+                  <label for="exampleInputEmail1">Customer Name</label>
                   <input type="text" class="form-control" value="<?= $a == 'Edit'? $companies[$c][0] : '' ?>">
+                </div>
+                <?php
+                function generateRandomString($length = 5) {
+                      $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                      $charactersLength = strlen($characters);
+                      $randomString = '';
+                      for ($i = 0; $i < $length; $i++) {
+                          $randomString .= $characters[rand(0, $charactersLength - 1)];
+                      }
+                      return $randomString;
+                  }
+
+                ?>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Customer Code</label>
+                  <input type="text" class="form-control" value="<?= $a == 'Edit'? $companies[$c][5] : generateRandomString() ?>">
                 </div>
 
                 <div class="form-group">
