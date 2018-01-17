@@ -15,7 +15,7 @@ include("header.php"); ?>
 
       <h4>User Details</h4>
       <div class="content__wrapper">
-        Code: <input value="89f4jj" disabled/>
+
         <input class="textfield textfield--shadow" placeholder="Company Name" value="ABC Company" disabled/>
         <input class="textfield textfield--shadow" placeholder="Full Name" />
         <!-- <input class="textfield textfield--shadow" placeholder="Address #1" />
@@ -25,7 +25,7 @@ include("header.php"); ?>
         <input class="textfield textfield--shadow" placeholder="Email Address" />
         <input class="textfield textfield--shadow" placeholder="Factory Address" /> -->
 
-        <input class="textfield textfield--shadow" placeholder="Billing Address" />
+        <!-- <input class="textfield textfield--shadow" placeholder="Billing Address" /> -->
 
         <button class="button button--blue">Submit</button>
       </div>

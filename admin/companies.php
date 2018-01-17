@@ -64,8 +64,8 @@ include('header.php'); ?>
                       //$warn = rand(0,1);
                       $warn = 1;
                     ?>
-                    <button <?= $warn == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger warningsent" id="warningsent<?= $i ?>" title="Click to unsend warning">Reminder Sent <br><?= date('d M Y') ?></button>
-                    <button <?= $warn == 0 ? 'style="display:none;"' : '' ?> class="btn btn-default sendwarning" id="sendwarning<?= $i ?>" title="Click to send warning">Send Reminder</button>
+                    <button <?= $warn == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger warningsent" id="warningsent<?= $i ?>" title="Click to unsend reminder">Reminder Sent <br><?= date('d M Y') ?></button>
+                    <button <?= $warn == 0 ? 'style="display:none;"' : '' ?> class="btn btn-default sendwarning" id="sendwarning<?= $i ?>" title="Click to send reminder">Send Reminder</button>
                   </td>
                   <td><?= $companies[$i][5] ?></td>
                   <td><?= $companies[$i][1] ?></td>
@@ -133,6 +133,7 @@ include('header.php'); ?>
       $(this).hide();
       var id = $(this).attr("id").replace("warningsent", "");
       $("#sendwarning"+id  ).show();
+      $(this).parent().parent().find(".inactiveon").hide();
     });
 
     $(".sendwarning").click(function(){

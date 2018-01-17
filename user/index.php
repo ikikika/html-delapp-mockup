@@ -135,7 +135,7 @@ include("header.php"); ?>
     // Get the modal
     var modal = document.getElementById('myModal');
 
-    <?php if( $_GET['warning'] ){ ?>
+    <?php if( isset($_GET['warning']) ){ ?>
     modal.style.display = "block";
     <?php } ?>
 
