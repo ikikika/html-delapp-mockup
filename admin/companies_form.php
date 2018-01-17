@@ -48,6 +48,21 @@ $c = $_GET['c'];
 
 
                 <div class="form-group">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                      Active
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                      Inactive
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label for="exampleInputEmail1">Customer Name</label>
                   <input type="text" class="form-control" value="<?= $a == 'Edit'? $companies[$c][0] : '' ?>">
                 </div>
