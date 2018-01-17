@@ -62,8 +62,8 @@ include('header.php'); ?>
                     <?php
                       $warn = rand(0,1);
                     ?>
-                    <button <?= $warn == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger warningsent" id="warningsent<?= $i ?>" title="Click to unsend warning">Warning sent</button>
-                    <button <?= $warn == 0 ? 'style="display:none;"' : '' ?> class="btn btn-default sendwarning" id="sendwarning<?= $i ?>" title="Click to send warning">Send warning</button>
+                    <button <?= $warn == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger warningsent" id="warningsent<?= $i ?>" title="Click to unsend warning">Overdue Reminder</button>
+                    <button <?= $warn == 0 ? 'style="display:none;"' : '' ?> class="btn btn-default sendwarning" id="sendwarning<?= $i ?>" title="Click to send warning">Send Reminder</button>
                   </td>
                   <td><?= $companies[$i][1] ?></td>
                   <td><?= $companies[$i][2] ?></td>
@@ -131,7 +131,7 @@ include('header.php'); ?>
     });
 
     $(".sendwarning").click(function(){
-      var confirm = window.confirm("Confirm send warning?");
+      var confirm = window.confirm("Confirm send reminder?");
       if( confirm ){
         $(this).hide();
         $("#warningsent"+ $(this).attr("id").replace("sendwarning", "")).show();
