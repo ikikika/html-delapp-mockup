@@ -5,20 +5,27 @@ include('header.php'); ?>
 <?php include('nav.php'); ?>
 
 <!-- fullCalendar 2.2.5-->
-<link rel="stylesheet" href="plugins/fullcalendarv3/fullcalendar.min.css">
+<link rel="stylesheet" href="plugins/fullcalendarv3/fullcalendar.css">
 <link rel="stylesheet" href="plugins/fullcalendarv3/fullcalendar.print.css" media="print">
-<link rel="stylesheet" href="plugins/fullcalendar-scheduler/scheduler.min.css">
+<link rel="stylesheet" href="plugins/fullcalendar-scheduler/scheduler.css">
 <style>
 .external-event .description{
   font-weight:normal !important;
 }
+.fc-resource-area{
+    width:15%;
+}
+.fc-highlight{
+  background-color: #000 !important;
+}
+
 </style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Main content -->
   <section class="content">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-12">
         <div class="box box-solid">
           <div class="box-header with-border">
             <h4 class="box-title">Tasks <?= date('d M Y') ?></h4>
@@ -26,31 +33,43 @@ include('header.php'); ?>
           <div class="box-body">
             <!-- the events -->
             <div id="external-events">
-              <div class="external-event bg-aqua">
-                <span class="title">Pick Up @ 8AM-9AM</span><br>
-                <span class="description">34 Jln Syed Hussein Taman Intan 02600 Arau Arau Perlis 02600 Malaysia Arau Perlis 02600 Malaysia</span>
+              <div class="col-sm-3">
+                <div class="external-event bg-aqua">
+                  <span class="title">Pick Up @ 8AM-9AM</span><br>
+                  <span class="description">34 Jln Syed Hussein Taman Intan 02600 Arau Arau Perlis 02600 Malaysia Arau Perlis 02600 Malaysia</span>
+                </div>
               </div>
-              <div class="external-event bg-red">
-                <span class="title">Drop Off</span><br>
-                <span class="description">Kawasan Perindustrian, Bukit Serdang, 43300</span>
+              <div class="col-sm-3">
+                <div class="external-event bg-red">
+                  <span class="title">Drop Off</span><br>
+                  <span class="description">Kawasan Perindustrian, Bukit Serdang, 43300</span>
+                </div>
               </div>
-              <div class="external-event bg-aqua">
-                <span class="title">Pick Up @ 12PM - 1PM</span><br>
-                <span class="description">Kampung Tengah Mukim Tualang Langgar Kedah 06500 Malaysia Langgar Kedah 06500 Malaysia</span>
+              <div class="col-sm-3">
+                <div class="external-event bg-aqua">
+                  <span class="title">Pick Up @ 12PM - 1PM</span><br>
+                  <span class="description">Kampung Tengah Mukim Tualang Langgar Kedah 06500 Malaysia Langgar Kedah 06500 Malaysia</span>
+                </div>
               </div>
-              <div class="external-event bg-fuchsia">
-                <span class="title">Delivery @ 2:30PM</span><br>
-                <span class="description">2 10 Lrg Medan Tuanku 1 50300 Wilayah Persekutuan 50300 Malaysia 50300 Malaysia</span>
+              <div class="col-sm-3">
+                <div class="external-event bg-fuchsia">
+                  <span class="title">Delivery @ 2:30PM</span><br>
+                  <span class="description">2 10 Lrg Medan Tuanku 1 50300 Wilayah Persekutuan 50300 Malaysia 50300 Malaysia</span>
+                </div>
               </div>
-              <div class="external-event bg-aqua">
-                <span class="title">Pick Up @ 3PM - 4PM</span><br>
-                <span class="description">1147A Jln Seberang Perak 05400 Alor Setar Kedah Alor Setar Kedah 05400 Malaysia</span>
+              <div class="col-sm-3">
+                <div class="external-event bg-aqua">
+                  <span class="title">Pick Up @ 3PM - 4PM</span><br>
+                  <span class="description">1147A Jln Seberang Perak 05400 Alor Setar Kedah Alor Setar Kedah 05400 Malaysia</span>
+                </div>
               </div>
-              <div class="checkbox">
-                <label for="drop-remove">
-                  <input type="checkbox" id="drop-remove" checked>
-                  remove after drop
-                </label>
+              <div class="col-sm-12">
+                <div class="checkbox">
+                  <label for="drop-remove">
+                    <input type="checkbox" id="drop-remove" checked>
+                    remove after drop
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -58,8 +77,10 @@ include('header.php'); ?>
         </div>
 
       </div>
+    </div>
+    <div class="row">
       <!-- /.col -->
-      <div class="col-md-9">
+      <div class="col-md-12">
         <div class="box box-primary">
           <div class="box-body no-padding">
             <!-- THE CALENDAR -->
@@ -115,42 +136,50 @@ include('header.php'); ?>
 <!-- Page specific script -->
 <script>
   $(function () {
+
     /* initialize the external events
      -----------------------------------------------------------------*/
     function ini_events(ele) {
       ele.each(function () {
+
         // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
         // it doesn't need to have a start or end
         var eventObject = {
           title: $.trim($(this).find('.title').text()), // use the element's text as the event title
           description: $.trim($(this).find('.description').text())
         };
+
         // store the Event Object in the DOM element so we can get to it later
         $(this).data('eventObject', eventObject);
+
         // make the event draggable using jQuery UI
         $(this).draggable({
           zIndex: 1070,
           revert: true, // will cause the event to go back to its
-          revertDuration: 0  //  original position after the drag
+          revertDuration: 0,  //  original position after the drag
+          opacity: 0.2
         });
+
       });
     }
+
     ini_events($('#external-events div.external-event'));
-    /* initialize the calendar
-     -----------------------------------------------------------------*/
-    //Date for the calendar events (dummy data)
+
     var todayDate = moment().startOf('day');
     var YM = todayDate.format('YYYY-MM');
     var YESTERDAY = todayDate.clone().subtract(1, 'day').format('YYYY-MM-DD');
     var TODAY = todayDate.format('YYYY-MM-DD');
     var TOMORROW = todayDate.clone().add(1, 'day').format('YYYY-MM-DD');
+
     $('#calendar').fullCalendar({
       contentHeight: 'auto',
       schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+
+      scrollTime: "00:00:00",
       header: {
-        left: 'prev,next today',
+        left: 'today prev,next',
         center: 'title',
-        right: 'month,agendaWeek,agendaDay'
+        right: 'timelineDay,timelineWeek'
       },
       buttonText: {
         today: 'today',
@@ -158,13 +187,13 @@ include('header.php'); ?>
         week: 'week',
         day: 'day'
       },
-      defaultView: 'agendaDay',
-      groupByResource: true,
+      defaultView: 'timelineDay',
+      resourceLabelText: 'Drivers',
       resources: [
-        { id: 'a', title: 'Driver A \n John Doe' },
-        { id: 'b', title: 'Driver B \n Peter Adam' },
-        { id: 'c', title: 'Driver C \n Charlie Dexter' },
-        { id: 'd', title: 'Driver D \n Edward Nigma' }
+        { id: 'a', title: 'John Doe' },
+        { id: 'b', title: 'Peter Adam' },
+        { id: 'c', title: 'Charlie Dexter' },
+        { id: 'd', title: 'Edward Nigma' }
       ],
       events:[
         { id: '1', resourceId: 'b', start: TODAY  + 'T02:00:00', end: TODAY  + 'T06:00:00', title: 'event 1' },
@@ -173,28 +202,40 @@ include('header.php'); ?>
       ],
       eventRender: function(event, element) {
         element.find(".fc-content").append(" (" + event.description + ")");
+        element.parent().children().eq(element.index()+1).css('left',"75px");
+        element.css("cssText","left: 75px !important;");
+        element.css("background-color","red");
+        console.log(element);
       },
       editable: true,
       droppable: true, // this allows things to be dropped onto the calendar !!!
       drop: function (date, allDay, ui, resourceId) { // this function is called when something is dropped
+
         // retrieve the dropped element's stored Event Object
         var originalEventObject = $(this).data('eventObject');
+
         // we need to copy it, so that multiple events don't have a reference to the same object
         var copiedEventObject = $.extend({}, originalEventObject);
+
         // assign it the date that was reported
         copiedEventObject.start = date;
         copiedEventObject.allDay = allDay;
         copiedEventObject.backgroundColor = $(this).css("background-color");
         copiedEventObject.borderColor = $(this).css("border-color");
         copiedEventObject.resourceId = resourceId;
+
         // render the event on the calendar
         // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
         $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+
         // is the "remove after drop" checkbox checked?
         if ($('#drop-remove').is(':checked')) {
           // if so, remove the element from the "Draggable Events" list
-          $(this).remove();
+          $(this).parent().remove();
         }
+
+        setcalwidth();
+
       },
       eventClick:  function(event, jsEvent, view) {
             $('#modalTitle').html(event.title);
@@ -203,45 +244,32 @@ include('header.php'); ?>
             $('#calendarModal').modal();
         },
     });
-    /* ADDING EVENTS */
-    var currColor = "#3c8dbc"; //Red by default
-    //Color chooser button
-    var colorChooser = $("#color-chooser-btn");
-    $("#color-chooser > li > a").click(function (e) {
-      e.preventDefault();
-      //Save color
-      currColor = $(this).css("color");
-      //Add color effect to button
-      $('#add-new-event').css({"background-color": currColor, "border-color": currColor});
+
+
+    setcalwidth();
+
+    $(".external-event").click(function(){
+      var title = $(this).find(".title").text();
+      var description = $(this).find(".description").text();
+      $('#modalTitle').html( title );
+      $('#modalDesc').html( description );
+      $('#calendarModal').modal();
     });
-    $("#add-new-event").click(function (e) {
-      e.preventDefault();
-      //Get value and make sure it is not null
-      var val = $("#new-event").val();
-      if (val.length == 0) {
-        return;
-      }
-      //Create events
-      var event = $("<div />");
-      event.css({"background-color": currColor, "border-color": currColor, "color": "#fff"}).addClass("external-event");
-      event.html(val);
-      $('#external-events').prepend(event);
-      //Add draggable funtionality
-      ini_events(event);
-      //Remove event from text input
-      $("#new-event").val("");
-    });
-    // if(calendar){
-    //
-    //     var calHeight = $(window).height()*0.83;
-    //     $('#calendar').fullCalendar('option', 'height', calHeight);
-    //
-    // }
-    var newheight = ( $(window).height() - 250 ) / 48;
-    console.log( newheight );
-    $(".fc-axis.fc-time.fc-widget-content").css("font-size", (newheight/2)+"px");
-    $(".fc-time-grid .fc-slats td").css('height', newheight);
+
+    function setcalwidth(){
+      var calwidth = parseInt( $("#calendar").css('width') );
+      var minuswidth = parseInt( $(".fc-divider.fc-col-resizer.fc-widget-header").css('width') ) + parseInt( $(".fc-resource-area.fc-widget-content").css('width') );
+      //console.log(calwidth/49);
+      $(".fc table").css('font-size', '10px');
+      $(".fc table").css('width', calwidth);
+      $(".fc-scroller-canvas, .fc-content table, .fc-slats, .fc-slats table").css('width', (calwidth - minuswidth));
+      $("colgroup col").css('width', '10px');
+    }
+
+
   });
+
+
 </script>
 <!-- end js -->
 <?php include('end.php'); ?>
