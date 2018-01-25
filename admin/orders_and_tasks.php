@@ -22,7 +22,8 @@ include('nav.php');
       <small></small>
     </h1>
     <br>
-    <a href="companies_form.php?a=Create" class="btn btn-info">Create New Order</a>
+    <a href="companies_form.php?a=Create" class="btn btn-success">Create New Order</a>
+    <a href="invoice_generate.php" class="btn btn-info">Generate Invoice</a>
   </section>
 
 
@@ -40,6 +41,7 @@ include('nav.php');
             <table id="example1" class="table table-bordered table-hover table-striped">
               <thead>
               <tr>
+                <th></th>
                 <th>Order No</th>
                 <th>User</th>
                 <th>Order Date</th>
@@ -51,17 +53,18 @@ include('nav.php');
               <tbody>
 
                 <tr>
+                  <td>
+                    <input type="checkbox">
+                  </td>
                   <td >XXXXMMDD003</td>
                   <td >johndoe85</td>
                   <td >3 Apr 2018</td>
                   <td>
                     <table class="table table-bordered" style="margin-bottom:0px;">
                       <tr>
-                        <tr>
-                          <td width="20%">Pick Up</td>
-                          <td width="30%">5 Apr 2018</td>
-                          <td width="50%">Pending Start</td>
-                        </tr>
+                        <td width="20%">Pick Up</td>
+                        <td width="30%">5 Apr 2018</td>
+                        <td width="50%">Pending Start</td>
                       </tr>
                       <tr>
                         <td>Delivery</td>
@@ -77,6 +80,9 @@ include('nav.php');
                 </tr>
 
                 <tr>
+                  <td>
+                    <input type="checkbox">
+                  </td>
                   <td >XXXXMMDD002</td>
                   <td >johndoe85</td>
                   <td >1 Apr 2018</td>
@@ -111,6 +117,9 @@ include('nav.php');
                 </tr>
 
                 <tr>
+                  <td>
+                    <input type="checkbox">
+                  </td>
                   <td >XXXXMMDD001</td>
                   <td >johndoe85</td>
                   <td >1 Apr 2018</td>
