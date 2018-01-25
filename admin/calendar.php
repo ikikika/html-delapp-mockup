@@ -30,6 +30,10 @@ include('header.php'); ?>
                 <span class="title">Pick Up @ 8AM-9AM</span><br>
                 <span class="description">34 Jln Syed Hussein Taman Intan 02600 Arau Arau Perlis 02600 Malaysia Arau Perlis 02600 Malaysia</span>
               </div>
+              <div class="external-event bg-fuchsia">
+                <span class="title">Delivery @ 2:30PM</span><br>
+                <span class="description">2 10 Lrg Medan Tuanku 1 50300 Wilayah Persekutuan 50300 Malaysia 50300 Malaysia</span>
+              </div>
               <div class="external-event bg-red">
                 <span class="title">Drop Off</span><br>
                 <span class="description">Kawasan Perindustrian, Bukit Serdang, 43300</span>
@@ -38,10 +42,7 @@ include('header.php'); ?>
                 <span class="title">Pick Up @ 12PM - 1PM</span><br>
                 <span class="description">Kampung Tengah Mukim Tualang Langgar Kedah 06500 Malaysia Langgar Kedah 06500 Malaysia</span>
               </div>
-              <div class="external-event bg-fuchsia">
-                <span class="title">Delivery @ 2:30PM</span><br>
-                <span class="description">2 10 Lrg Medan Tuanku 1 50300 Wilayah Persekutuan 50300 Malaysia 50300 Malaysia</span>
-              </div>
+
               <div class="external-event bg-aqua">
                 <span class="title">Pick Up @ 3PM - 4PM</span><br>
                 <span class="description">1147A Jln Seberang Perak 05400 Alor Setar Kedah Alor Setar Kedah 05400 Malaysia</span>

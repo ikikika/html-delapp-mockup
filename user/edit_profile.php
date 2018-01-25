@@ -1,10 +1,26 @@
 <?php
 $title = "Edit Profile";
-include("header.php"); ?>
+include("header.php");
 
-<?php include("nav.php"); ?>
+include("nav.php");
+
+
+?>
+
+
 
     <article class="main__content content">
+<?php
+      if( isset($_GET['login']) ){
+      ?>
+      <br>
+      <div class="alert alert--radius alert--blue bg-aqua">
+        <span class="alert__close">x</span>
+        <strong>Please change your password</strong>
+      </div>
+      <?php
+      }
+?>
       <h4>Login Information</h4>
       <div class="content__wrapper">
         <input class="textfield textfield--shadow" placeholder="Username" disabled/>

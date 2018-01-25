@@ -125,18 +125,18 @@
   <body>
     <div class="login-page">
       <div class="form">
-        <form class="register-form">
+        <!-- <form class="register-form">
           <input type="text" placeholder="name"/>
           <input type="password" placeholder="password"/>
           <input type="text" placeholder="email address"/>
           <button>create</button>
           <p class="message">Already registered? <a href="#">Sign In</a></p>
-        </form>
+        </form> -->
         <form class="login-form">
-          <input type="text" placeholder="username"/>
+          <input type="text" placeholder="username" class="username"/>
           <input type="password" placeholder="password"/>
-          <button>login</button>
-          <p class="message">Not registered? <a href="#">Create an account</a></p>
+          <button class="login">login</button>
+          <!-- <p class="message">Not registered? <a href="#">Create an account</a></p> -->
         </form>
       </div>
     </div>
@@ -147,6 +147,17 @@
     $(document).ready(function(){
       $('.message a').click(function(){
          $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+      });
+
+      $('.login').click (function(e){
+        e.preventDefault();
+        var u = $('.username').val();
+        console.log(u);
+        if( u == 'first'){
+          window.location.href = "edit_profile.php?login=first";
+        } else {
+          window.location.href = "index.php";
+        }
       });
     });
   </script>

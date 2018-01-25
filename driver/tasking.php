@@ -21,7 +21,7 @@ include("header.php"); ?>
   <div class="content__wrapper">
 
       <h2 style="color:<?= $color ?>;"><?= $title ?></h2>
-
+      <p>Scheduled time: 6AM-7AM</p>
       <h3>Started at <?= date('h:i:s a') ?></h3>
 
       <h4>Order: XXXXMMDD001 </h4>

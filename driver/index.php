@@ -19,8 +19,9 @@ include("header.php"); ?>
             </div>
           </div>
           <div class="card__content">
-            <p>Order: XXXXMMDD001 </p>
-            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+<p>Scheduled time: 6AM-7AM</p>
+<p>Order: XXXXMMDD001 </p>
+            <p>Address: <input type="text" value="93 Jln Segamat Batu 5 85010 Buloh Kasap 85010 Malaysia Segamat Johor 85010 Malaysia" id="myInput">  <button id="copybutton" onclick="myFunction()">Copy text</button>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
@@ -37,8 +38,9 @@ include("header.php"); ?>
             </div>
           </div>
           <div class="card__content">
-            <p>Order: XXXXMMDD001 </p>
-            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Scheduled time: 6AM-7AM</p>
+<p>Order: XXXXMMDD001 </p>
+            <p>Address: <input type="text" value="93 Jln Segamat Batu 5 85010 Buloh Kasap 85010 Malaysia Segamat Johor 85010 Malaysia" id="myInput">  <button id="copybutton" onclick="myFunction()">Copy text</button>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
@@ -55,8 +57,9 @@ include("header.php"); ?>
             </div>
           </div>
           <div class="card__content">
-            <p>Order: XXXXMMDD001 </p>
-            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Scheduled time: 6AM-7AM</p>
+<p>Order: XXXXMMDD001 </p>
+            <p>Address: <input type="text" value="93 Jln Segamat Batu 5 85010 Buloh Kasap 85010 Malaysia Segamat Johor 85010 Malaysia" id="myInput">  <button id="copybutton" onclick="myFunction()">Copy text</button>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
@@ -73,8 +76,9 @@ include("header.php"); ?>
             </div>
           </div>
           <div class="card__content">
-            <p>Order: XXXXMMDD001 </p>
-            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Scheduled time: 6AM-7AM</p>
+<p>Order: XXXXMMDD001 </p>
+            <p>Address: <input type="text" value="93 Jln Segamat Batu 5 85010 Buloh Kasap 85010 Malaysia Segamat Johor 85010 Malaysia" id="myInput">  <button id="copybutton" onclick="myFunction()">Copy text</button>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
@@ -93,8 +97,9 @@ include("header.php"); ?>
             </div>
           </div>
           <div class="card__content">
-            <p>Order: XXXXMMDD001 </p>
-            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Scheduled time: 6AM-7AM</p>
+<p>Order: XXXXMMDD001 </p>
+            <p>Address: <input type="text" value="93 Jln Segamat Batu 5 85010 Buloh Kasap 85010 Malaysia Segamat Johor 85010 Malaysia" id="myInput">  <button id="copybutton" onclick="myFunction()">Copy text</button>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
@@ -111,8 +116,9 @@ include("header.php"); ?>
             </div>
           </div>
           <div class="card__content">
-            <p>Order: XXXXMMDD001 </p>
-            <p>Address: 123 ABC Street <a href="https://goo.gl/maps/o67Ab6z6tQE2">MAP</a></p>
+            <p>Scheduled time: 6AM-7AM</p>
+<p>Order: XXXXMMDD001 </p>
+            <p>Address: <input type="text" value="93 Jln Segamat Batu 5 85010 Buloh Kasap 85010 Malaysia Segamat Johor 85010 Malaysia" id="myInput">  <button id="copybutton" onclick="myFunction()">Copy text</button>
             <p>Contact: John Doe</p>
             <p>Tel: 123-456-789</p>
             <p>Package: 2 boxes</p>
@@ -131,7 +137,21 @@ include("header.php"); ?>
 <?php include("footer.php"); ?>
 
 <!-- js here -->
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
 
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("Copy");
+
+  /* Alert the copied text */
+  document.getElementById("copybutton").innerHTML = "Copied!";
+}
+</script>
 
 <!-- end js -->
 

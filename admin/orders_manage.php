@@ -35,6 +35,10 @@ include('nav.php'); ?>
         <div class="box">
           <div class="box-header">
             Order Information
+            <div class="pull-right box-tools">
+              <button type="button" class="btn btn-warning btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+            </div>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -56,7 +60,11 @@ include('nav.php'); ?>
 
         <div class="box">
           <div class="box-header">
-            Pick Up
+            Pick Up XXXXMMDD0001-pickup
+            <div class="pull-right box-tools">
+              <button type="button" class="btn btn-warning btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+            </div>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -107,7 +115,8 @@ include('nav.php'); ?>
                   <div class="col-sm-10 col-lg-11">
                     <div class="form-group">
                       <select class="form-control">
-                        <option>Driver 1</option>
+                        <option>Driver Unassigned</option>
+<option>Driver 1</option>
                         <option>Driver 2</option>
                         <option>Driver 3</option>
                         <option>Driver 4</option>
@@ -134,11 +143,16 @@ include('nav.php'); ?>
         <div class="appenddropoff"></div>
 
         <button class="btn btn-success add_drop_off">Add Drop Off</button>
+        <input type="hidden" class="count" value="0">
         <br><br>
 
         <div class="box">
           <div class="box-header">
-            Delivery
+            Delivery XXXXMMDD0001-delivery
+            <div class="pull-right box-tools">
+              <button type="button" class="btn btn-warning btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+            </div>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -181,7 +195,8 @@ include('nav.php'); ?>
                   <div class="col-sm-10 col-lg-11">
                     <div class="form-group">
                       <select class="form-control">
-                        <option>Driver 1</option>
+                        <option>Driver Unassigned</option>
+<option>Driver 1</option>
                         <option>Driver 2</option>
                         <option>Driver 3</option>
                         <option>Driver 4</option>
@@ -214,12 +229,16 @@ include('nav.php'); ?>
 
 <script>
   $(function () {
-
+    var i;
     $(".add_drop_off").click(function(){
-
-      $(".appenddropoff").prepend('<div class="box">\
+      i = parseInt($(".count").val()) +1;
+      $(".appenddropoff").append('<div class="box" style="background-color:#D8D8D8;">\
                                     <div class="box-header">\
-                                      Drop Off\
+                                      Drop Off XXXXMMDD0001-dropoff'+i+'\
+                                      <div class="pull-right box-tools">\
+                                        <button type="button" class="btn btn-warning btn-sm fadetask" data-widget="collapse"><i class="fa fa-minus"></i>\
+                                        </button>\
+                                      </div>\
                                     </div>\
                                     <div class="box-body">\
                                       <form role="form">\
@@ -227,33 +246,33 @@ include('nav.php'); ?>
                                           <div class="row" >\
                                             <label for="inputEmail3" class="col-sm-2 col-lg-1 control-label">Date</label>\
                                             <div class="col-sm-4 col-lg-5">\
-                                              <input type="text" class="form-control" value="3 Apr 2018" disabled>\
+                                              <input type="text" class="form-control" value="3 Apr 2018" >\
                                             </div>\
                                             <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Time</label>\
                                             <div class="col-sm-4 col-lg-5">\
-                                              <input type="text" class="form-control" value="3PM" disabled>\
+                                              <input type="text" class="form-control" value="3PM" >\
                                             </div>\
                                           </div>\
                                           <div class="row">\
                                             <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Address</label>\
                                             <div class="col-sm-10 col-lg-11">\
-                                              <input type="text" class="form-control" value="123 NLKNF Street Ave" disabled>\
+                                              <input type="text" class="form-control" value="123 NLKNF Street Ave" >\
                                             </div>\
                                           </div>\
                                           <div class="row">\
                                             <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Contact</label>\
                                             <div class="col-sm-4 col-lg-5">\
-                                              <input type="text" class="form-control" value="John Doe" disabled>\
+                                              <input type="text" class="form-control" value="John Doe" >\
                                             </div>\
                                             <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Tel</label>\
                                             <div class="col-sm-4 col-lg-5">\
-                                              <input type="text" class="form-control" value="23423432423" disabled>\
+                                              <input type="text" class="form-control" value="23423432423" >\
                                             </div>\
                                           </div>\
                                           <div class="row">\
                                             <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Package</label>\
                                             <div class="col-sm-10 col-lg-11">\
-                                              <input type="text" class="form-control" value="2 Boxes" disabled>\
+                                              <input type="text" class="form-control" value="2 Boxes" >\
                                             </div>\
                                           </div>\
                                           <div class="row">\
@@ -261,7 +280,8 @@ include('nav.php'); ?>
                                             <div class="col-sm-10 col-lg-11">\
                                               <div class="form-group">\
                                                 <select class="form-control">\
-                                                  <option>Driver 1</option>\
+                                                  <option>Driver Unassigned</option>
+<option>Driver 1</option>\
                                                   <option>Driver 2</option>\
                                                   <option>Driver 3</option>\
                                                   <option>Driver 4</option>\
@@ -277,9 +297,13 @@ include('nav.php'); ?>
                                       </form>\
                                     </div>\
                                   </div>\
-                                  <div class="box">\
+                                  <div class="box" style="background-color:#D8D8D8;">\
                                                                 <div class="box-header">\
-                                                                Pick Up\
+                                                                Pick Up XXXXMMDD0001-dropoff'+i+'-pickup\
+                                                                <div class="pull-right box-tools">\
+                                                                  <button type="button" class="btn btn-warning btn-sm fadetask" data-widget="collapse"><i class="fa fa-minus"></i>\
+                                                                  </button>\
+                                                                </div>\
                                                                 </div>\
                                                                 <div class="box-body">\
                                                                   <form role="form">\
@@ -287,33 +311,33 @@ include('nav.php'); ?>
                                                                       <div class="row" >\
                                                                         <label for="inputEmail3" class="col-sm-2 col-lg-1 control-label">Date</label>\
                                                                         <div class="col-sm-4 col-lg-5">\
-                                                                          <input type="text" class="form-control" value="3 Apr 2018" disabled>\
+                                                                          <input type="text" class="form-control" value="3 Apr 2018" >\
                                                                         </div>\
                                                                         <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Time</label>\
                                                                         <div class="col-sm-4 col-lg-5">\
-                                                                          <input type="text" class="form-control" value="3PM" disabled>\
+                                                                          <input type="text" class="form-control" value="3PM" >\
                                                                         </div>\
                                                                       </div>\
                                                                       <div class="row">\
                                                                         <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Address</label>\
                                                                         <div class="col-sm-10 col-lg-11">\
-                                                                          <input type="text" class="form-control" value="123 NLKNF Street Ave" disabled>\
+                                                                          <input type="text" class="form-control" value="123 NLKNF Street Ave" >\
                                                                         </div>\
                                                                       </div>\
                                                                       <div class="row">\
                                                                         <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Contact</label>\
                                                                         <div class="col-sm-4 col-lg-5">\
-                                                                          <input type="text" class="form-control" value="John Doe" disabled>\
+                                                                          <input type="text" class="form-control" value="John Doe" >\
                                                                         </div>\
                                                                         <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Tel</label>\
                                                                         <div class="col-sm-4 col-lg-5">\
-                                                                          <input type="text" class="form-control" value="23423432423" disabled>\
+                                                                          <input type="text" class="form-control" value="23423432423" >\
                                                                         </div>\
                                                                       </div>\
                                                                       <div class="row">\
                                                                         <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Package</label>\
                                                                         <div class="col-sm-10 col-lg-11">\
-                                                                          <input type="text" class="form-control" value="2 Boxes" disabled>\
+                                                                          <input type="text" class="form-control" value="2 Boxes" >\
                                                                         </div>\
                                                                       </div>\
                                                                       <div class="row">\
@@ -321,7 +345,8 @@ include('nav.php'); ?>
                                                                         <div class="col-sm-10 col-lg-11">\
                                                                           <div class="form-group">\
                                                                             <select class="form-control">\
-                                                                              <option>Driver 1</option>\
+                                                                              <option>Driver Unassigned</option>
+<option>Driver 1</option>\
                                                                               <option>Driver 2</option>\
                                                                               <option>Driver 3</option>\
                                                                               <option>Driver 4</option>\
@@ -338,11 +363,22 @@ include('nav.php'); ?>
                                                                 </div>\
                                                               </div>\
                                   ');
+                                  $(".count").val(i);
+
 
     });
 
 
-  })
+    $("body").on("click", ".fadetask", function(){
+      $(this).parent().parent().parent().find(".box-body").fadeToggle();
+      if( $(this).find(".fa").hasClass("fa-minus") ){
+        $(this).find(".fa").removeClass("fa-minus").addClass("fa-plus");
+      } else {
+        $(this).find(".fa").removeClass("fa-plus").addClass("fa-minus");
+      }
+    });
+
+  });
 </script>
 <!-- end js -->
 

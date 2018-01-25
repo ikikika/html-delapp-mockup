@@ -20,19 +20,7 @@ include("header.php");
           <option value="3">Loose Package</option>
         </select>
 
-        <select class="select select--radius" id="select_box-2">
-          <option value="">Select Quantity</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
+        <input type="number" class="textfield textfield--shadow" placeholder="Input quantity"/>
       </div>
 
       <h4>Pick Up Details</h4>
@@ -66,7 +54,7 @@ include("header.php");
           <option value="">11PM - 12PM</option>
         </select>
         <input class="textfield textfield--shadow" id="autocomplete1" placeholder="Pick Up Location"
-               onFocus="geolocate()" type="text"/>
+               onFocus="geolocate()" type="text" value="123 ABCD Steet Kuala Lumpur Selangor 12344"/>
     </div>
 
     <h4>Delivery Details</h4>
@@ -99,8 +87,9 @@ include("header.php");
       <option value="">10PM - 11PM</option>
       <option value="">11PM - 12PM</option>
     </select>
+
     <input class="textfield textfield--shadow" id="autocomplete2" placeholder="Delivery Location"
-        onFocus="geolocate()" type="text"/>
+        onFocus="geolocate()" type="text" />
     </div>
 
     <h4>Receiver Information</h4>
