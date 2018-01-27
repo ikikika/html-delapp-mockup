@@ -50,7 +50,7 @@ include('nav.php'); ?>
 
               <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">User</label>
               <div class="col-sm-4 col-lg-5">
-                <input type="text" class="form-control" value="John Doe" disabled>
+                <input type="text" class="form-control" placeholder="Enter user name" <?= isset($_GET['new']) ? "" : 'value="John Doe" disabled' ?>>
               </div>
             </div>
           </div>
@@ -75,38 +75,38 @@ include('nav.php'); ?>
                 <div class="row" >
                   <label for="inputEmail3" class="col-sm-2 col-lg-1 control-label">Date</label>
                   <div class="col-sm-4 col-lg-5">
-                    <input type="text" class="form-control" value="2 Apr 2018" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="2 Apr 2018" disabled' ?>>
                   </div>
 
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Time</label>
                   <div class="col-sm-4 col-lg-5">
-                    <input type="text" class="form-control" value="12PM-1PM" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="12PM-1PM" disabled' ?>>
                   </div>
                 </div>
 
                 <div class="row">
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Address</label>
                   <div class="col-sm-10 col-lg-11">
-                    <input type="text" class="form-control" value="123 NLKNF Street Ave" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="123 NLKNF Street Ave" disabled' ?>>
                   </div>
                 </div>
 
                 <div class="row">
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Contact</label>
                   <div class="col-sm-4 col-lg-5">
-                    <input type="text" class="form-control" value="John Doe" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="John Doe" disabled' ?> >
                   </div>
 
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Tel</label>
                   <div class="col-sm-4 col-lg-5">
-                    <input type="text" class="form-control" value="23423432423" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="23423432423" disabled' ?>>
                   </div>
                 </div>
 
                 <div class="row">
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Package</label>
                   <div class="col-sm-10 col-lg-11">
-                    <input type="text" class="form-control" value="2 Boxes" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="2 Boxes" disabled' ?>>
                   </div>
                 </div>
 
@@ -116,7 +116,7 @@ include('nav.php'); ?>
                     <div class="form-group">
                       <select class="form-control">
                         <option>Driver Unassigned</option>
-<option>Driver 1</option>
+                        <option>Driver 1</option>
                         <option>Driver 2</option>
                         <option>Driver 3</option>
                         <option>Driver 4</option>
@@ -158,45 +158,52 @@ include('nav.php'); ?>
           <div class="box-body">
             <form role="form">
               <div class="box-body">
+
                 <div class="row" >
                   <label for="inputEmail3" class="col-sm-2 col-lg-1 control-label">Date</label>
                   <div class="col-sm-4 col-lg-5">
-                    <input type="text" class="form-control" value="3 Apr 2018" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="2 Apr 2018" disabled' ?>>
                   </div>
+
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Time</label>
                   <div class="col-sm-4 col-lg-5">
-                    <input type="text" class="form-control" value="3PM" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="12PM-1PM" disabled' ?>>
                   </div>
                 </div>
+
                 <div class="row">
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Address</label>
                   <div class="col-sm-10 col-lg-11">
-                    <input type="text" class="form-control" value="123 NLKNF Street Ave" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="123 NLKNF Street Ave" disabled' ?>>
                   </div>
                 </div>
+
                 <div class="row">
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Contact</label>
                   <div class="col-sm-4 col-lg-5">
-                    <input type="text" class="form-control" value="John Doe" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="John Doe" disabled' ?> >
                   </div>
+
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Tel</label>
                   <div class="col-sm-4 col-lg-5">
-                    <input type="text" class="form-control" value="23423432423" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="23423432423" disabled' ?>>
                   </div>
                 </div>
+
                 <div class="row">
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Package</label>
                   <div class="col-sm-10 col-lg-11">
-                    <input type="text" class="form-control" value="2 Boxes" disabled>
+                    <input type="text" class="form-control" <?= isset($_GET['new']) ? "" : 'value="2 Boxes" disabled' ?>>
                   </div>
                 </div>
+
                 <div class="row">
                   <label for="inputPassword3" class="col-sm-2 col-lg-1 control-label">Driver</label>
                   <div class="col-sm-10 col-lg-11">
                     <div class="form-group">
                       <select class="form-control">
                         <option>Driver Unassigned</option>
-<option>Driver 1</option>
+                        <option>Driver 1</option>
                         <option>Driver 2</option>
                         <option>Driver 3</option>
                         <option>Driver 4</option>
@@ -205,6 +212,7 @@ include('nav.php'); ?>
                     </div>
                   </div>
                 </div>
+
               </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -280,7 +288,7 @@ include('nav.php'); ?>
                                             <div class="col-sm-10 col-lg-11">\
                                               <div class="form-group">\
                                                 <select class="form-control">\
-                                                  <option>Driver Unassigned</option>
+                                                  <option>Driver Unassigned</option>\
 <option>Driver 1</option>\
                                                   <option>Driver 2</option>\
                                                   <option>Driver 3</option>\
@@ -345,8 +353,8 @@ include('nav.php'); ?>
                                                                         <div class="col-sm-10 col-lg-11">\
                                                                           <div class="form-group">\
                                                                             <select class="form-control">\
-                                                                              <option>Driver Unassigned</option>
-<option>Driver 1</option>\
+                                                                              <option>Driver Unassigned</option>\
+                                                                              <option>Driver 1</option>\
                                                                               <option>Driver 2</option>\
                                                                               <option>Driver 3</option>\
                                                                               <option>Driver 4</option>\

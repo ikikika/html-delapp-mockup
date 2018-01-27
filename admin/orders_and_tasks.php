@@ -22,7 +22,7 @@ include('nav.php');
       <small></small>
     </h1>
     <br>
-    <a href="companies_form.php?a=Create" class="btn btn-success">Create New Order</a>
+    <a href="orders_manage.php?new=1" class="btn btn-success">Create New Order</a>
     <a href="invoice_generate.php" class="btn btn-info">Generate Invoice</a>
   </section>
 
@@ -135,12 +135,25 @@ include('nav.php');
                       <tr>
                         <td>Delivery</td>
                         <td>3 Apr 2018</td>
-                        <td>Completed</td>
+                        <td>
+                          <select>
+                            <option>Completed</option>
+                            <option>Pending completion</option>
+                            <option>Pending start</option>
+                            <option>No Driver assigned</option>
+                          </select>
+                        </td>
                       </tr>
                     </table>
                   </td>
                   <td>
-                    Completed <br>
+                    <select>
+                      <option>Completed</option>
+                      <option>In progress</option>
+                      <option>Cancelled</option>
+                      <option>Created</option>
+                    </select>
+                    <br>
                     <a href="../user/invoice-file.php" target="_blank">Invoice</a>
                   </td>
                   <td>

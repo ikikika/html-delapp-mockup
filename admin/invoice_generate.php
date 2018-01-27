@@ -176,7 +176,7 @@ input[type=number] {
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary submitbtn">Submit</button>
               </div>
             </form>
 
@@ -292,6 +292,11 @@ function calcbalance(){
     $("#balance").html(balance);
   }
 }
+
+$(".submitbtn").click(function(e){
+  e.preventDefault();
+  window.location.href = "../user/invoice-file.php";
+});
 
 </script>
 <!-- end js -->

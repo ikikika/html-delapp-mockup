@@ -21,7 +21,7 @@ include('header.php'); ?>
       <div class="col-md-3">
         <div class="box box-solid">
           <div class="box-header with-border">
-            <h4 class="box-title">Tasks <?= date('d M Y') ?></h4>
+            <h4 class="box-title">Tasks <?= date('d M Y', strtotime(' + 1 days')); ?></h4>
           </div>
           <div class="box-body">
             <!-- the events -->
@@ -168,11 +168,11 @@ include('header.php'); ?>
         { id: 'c', title: 'Driver C \n Charlie Dexter' },
         { id: 'd', title: 'Driver D \n Edward Nigma' }
       ],
-      events:[
-        { id: '1', resourceId: 'b', start: TODAY  + 'T02:00:00', end: TODAY  + 'T06:00:00', title: 'event 1' },
-        { id: '2', resourceId: 'a', start: TODAY  + 'T06:00:00', end: TODAY  + 'T08:00:00', title: 'event 1' },
-        { id: '3', resourceId: 'a', start: TODAY  + 'T02:00:00', end: TODAY  + 'T03:00:00', title: 'event 1' }
-      ],
+      // events:[
+      //   { id: '1', resourceId: 'b', start: TODAY  + 'T02:00:00', end: TODAY  + 'T06:00:00', title: 'event 1' },
+      //   { id: '2', resourceId: 'a', start: TODAY  + 'T06:00:00', end: TODAY  + 'T08:00:00', title: 'event 1' },
+      //   { id: '3', resourceId: 'a', start: TODAY  + 'T02:00:00', end: TODAY  + 'T03:00:00', title: 'event 1' }
+      // ],
       eventRender: function(event, element) {
         element.find(".fc-content").append(" (" + event.description + ")");
       },

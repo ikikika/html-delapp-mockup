@@ -12,15 +12,19 @@ include("header.php"); ?>
 
   <div class="content__wrapper">
 
+    <?php if( isset($_GET['assigned']) ){ ?>
     <div class="alert alert--radius alert--orange bg-yellow">
       <span class="alert__close">x</span>
       <strong>Order XXXXMMDD01</strong> Driver assigned
     </div>
+    <?php } ?>
 
+    <?php if( isset($_GET['delivered']) ){ ?>
     <div class="alert alert--radius alert--green bg-green">
       <span class="alert__close">x</span>
       <strong>Order XXXXMMDD01</strong> Package delivered
     </div>
+    <?php } ?>
 
     <div class="grid__row">
 
