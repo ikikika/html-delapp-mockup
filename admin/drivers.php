@@ -80,6 +80,10 @@ include('header.php'); ?>
                       <i class="fa fa-edit"></i>
                     </a>
 
+                    <a href="driver_allowance_incentives.php" class="btn btn-success" title="Allowance & Incentives">
+                      <i class="fa fa-dollar"></i>
+                    </a>
+
                     <a href="users_activity.php" class="btn btn-primary" title="Activity">
                       <i class="fa fa-list"></i>
                     </a>

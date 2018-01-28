@@ -51,7 +51,7 @@ input[type=number] {
                     <div class="col-md-4">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Invoice No</label>
-                        <input type="text" class="form-control" value="100121">
+                        <input type="text" class="form-control" value="100121" disabled>
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -63,7 +63,7 @@ input[type=number] {
                     <div class="col-md-4">
                       <div class="form-group">
                         <label>Invoice Due Date</label>
-                        <input type="text" class="form-control" id="datepicker2" value="<?= date('d-m-Y') ?>">
+                        <input type="text" class="form-control" id="datepicker2" value="<?= date('d M Y', strtotime(' + 10 days')) ?>">
                       </div>
                     </div>
                   </div>
@@ -85,7 +85,7 @@ input[type=number] {
                     </th>
                     <th>Qty</th>
                     <th>Unit Cost</th>
-                    <th>Sub-total</th>
+                    <th>Line total</th>
                     <th></th>
                   </tr>
                   </thead>
@@ -106,8 +106,8 @@ input[type=number] {
                           </tr>
                         </table>
                       </td>
-                      <td><input type="number" class="qty" id="qty1" value="2"></td>
-                      <td>$<input type="number" class="unit" id="unit1" value="10"></td>
+                      <td><input type="number" class="qty" id="qty1" value="2" disabled></td>
+                      <td>$<input type="number" class="unit" id="unit1" value="10" disabled></td>
                       <td>$<span class="subtotal" id="subtotal1">20</span></td>
                       <td>
                         <button class="btn btn-danger removeline"><i class="fa fa-trash"></i></button>
@@ -129,8 +129,8 @@ input[type=number] {
                           </tr>
                         </table>
                       </td>
-                      <td><input type="number" class="qty" id="qty2" value="3"></td>
-                      <td>$<input type="number" class="unit" id="unit2" value="5"></td>
+                      <td><input type="number" class="qty" id="qty2" value="3" disabled></td>
+                      <td>$<input type="number" class="unit" id="unit2" value="5" disabled></td>
                       <td>$<span class="subtotal" id="subtotal2">15</span></td>
                       <td>
                         <button class="btn btn-danger removeline"><i class="fa fa-trash"></i></button>
@@ -144,21 +144,39 @@ input[type=number] {
                       </td>
                     </tr>
 
-                    <tr>
+                    <tr style="display:none;">
                       <td colspan="5" style="font-weight:bold;text-align:right;">Total:</td>
                       <td>$<span id="total">35</span></td>
                       <td></td>
                     </tr>
 
-                    <tr>
+                    <tr style="display:none;">
                       <td colspan="5" style="font-weight:bold;text-align:right;">Amount Paid:</td>
                       <td>$<input type="number" id="amtpaid"></td>
                       <td></td>
                     </tr>
 
-                    <tr id="balancerow">
+                    <tr style="display:none;opacity:0;" id="balancerow" >
                       <td colspan="5" style="font-weight:bold;text-align:right;">Balance:</td>
                       <td>$<span id="balance">35</span></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="5" style="font-weight:bold;text-align:right;">Sub Total:</td>
+                      <td>$<span id="total">35</span></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="5" style="font-weight:bold;text-align:right;">GST:</td>
+                      <td><input type="number" id="gst">%</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="5" style="font-weight:bold;text-align:right;">Grand Total:</td>
+                      <td>$<span id="grandtotal">35</span></td>
                       <td></td>
                     </tr>
 
@@ -292,6 +310,20 @@ function calcbalance(){
     $("#balance").html(balance);
   }
 }
+
+$("#gst").keyup(function(){
+  var gst = $(this).val() == "" ? 0 : parseFloat( $(this).val() );
+  var total = $('#total').html() == "" ? 0 : parseFloat($('#total').html());
+  var grandtotal = total * ((100 + gst )/100);
+  $("#grandtotal").html( parseFloat(grandtotal).toFixed(2) );
+});
+
+$("#gst").change(function(){
+  var gst = $(this).val() == "" ? 0 : parseFloat( $(this).val() );
+  var total = $('#total').html() == "" ? 0 : parseFloat($('#total').html());
+  var grandtotal = total * ((100 + gst )/100);
+  $("#grandtotal").html( parseFloat(grandtotal).toFixed(2) );
+});
 
 $(".submitbtn").click(function(e){
   e.preventDefault();
