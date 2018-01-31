@@ -17,7 +17,7 @@ include('header.php'); ?>
       <small></small>
     </h1>
     <br>
-    <a href="drivers_form.php?a=Create" class="btn btn-info">Create New Driver</a>
+    <a href="drivers_form.php?a=Create" class="btn btn-success">Create New Driver</a>
   </section>
 
 
