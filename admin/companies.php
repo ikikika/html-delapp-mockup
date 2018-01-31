@@ -42,6 +42,7 @@ include('header.php'); ?>
                 <th>GST Reg No.</th>
                 <th>Telephone</th>
                 <th>Contact Person</th>
+                <th>Sponsor</th>
                 <th>Users</th>
                 <th>Packages</th>
                 <th>Status</th>
@@ -71,7 +72,7 @@ include('header.php'); ?>
                   <td><?= $companies[$i][1] ?></td>
                   <td><?= $companies[$i][2] ?></td>
                   <td><?= $companies[$i][3] ?></td>
-
+                  <td><?= $companies[$i][6] ?></td>
                   <td>
                     <a href="company_users.php?c=<?= $i-1 ?>&u=<?= $companies[$i][4] ?>" class="btn btn-primary" title="<?= $companies[$i][4] ?> users">
                       <?= $companies[$i][4] ?>

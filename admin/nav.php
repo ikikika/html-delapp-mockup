@@ -49,6 +49,12 @@
         </a>
       </li>
 
+      <li class="<?= $title == "Sponsors" ? "active" : "" ?>">
+        <a href="sponsors.php">
+          <i class="fa fa-users"></i> <span>Sponsors</span>
+        </a>
+      </li>
+
     </ul>
   </section>
   <!-- /.sidebar -->

@@ -1,5 +1,5 @@
 <?php
-$title = "Users";
+$title = "Sponsors";
 include('header.php'); ?>
 
 <?php include('nav.php'); ?>
@@ -13,11 +13,11 @@ include('header.php'); ?>
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Users
+      Sponsors
       <small></small>
     </h1>
     <br>
-    <a href="users_form.php?a=Create" class="btn btn-success">Create New User</a>
+    <a href="sponsors_form.php?a=Create" class="btn btn-success">Create New Sponsor</a>
   </section>
 
 
@@ -36,8 +36,7 @@ include('header.php'); ?>
               <thead>
               <tr>
                 <th>ID</th>
-                <th>Company Name</th>
-                <th>Full Name</th>
+                <th>Name</th>
                 <th>Phone</th>
                 <th>Email</th>
                 <th>Username</th>
@@ -70,17 +69,16 @@ include('header.php'); ?>
                 ?>
                 <tr>
                   <td><?= $i ?></td>
-                  <td><?= generateRandomString(); ?> Company</td>
                   <td><?= generateRandomString(); ?> <?= generateRandomString(); ?></td>
                   <td><?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?></td>
                   <td><?= generateRandomString(); ?>@<?= generateRandomString().".com"; ?></td>
                   <td><?= generateRandomString(6); ?></td>
                   <td>
-                    <a href="users_form.php?a=Edit" class="btn btn-warning" title="Edit">
+                    <a href="sponsors_form.php?a=Edit" class="btn btn-warning" title="Edit">
                       <i class="fa fa-edit"></i>
                     </a>
 
-                    <a href="users_activity.php" class="btn btn-primary" title="Activity">
+                    <a href="sponsors_activity.php" class="btn btn-primary" title="Activity">
                       <i class="fa fa-list"></i>
                     </a>
 

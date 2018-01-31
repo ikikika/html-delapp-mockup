@@ -45,16 +45,6 @@ include('header.php'); ?>
               </thead>
               <tbody>
                 <?php
-                  function generateRandomString($length = 5) {
-                        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                        $charactersLength = strlen($characters);
-                        $randomString = '';
-                        for ($i = 0; $i < $length; $i++) {
-                            $randomString .= $characters[rand(0, $charactersLength - 1)];
-                        }
-                        return $randomString;
-                    }
-
                     $type = ['Allowance', 'Attendace Incentive', 'Special'];
                     $states = [
                              'Johor',
