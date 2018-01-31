@@ -78,6 +78,10 @@ include('header.php'); ?>
                       <i class="fa fa-edit"></i>
                     </a>
 
+                    <a href="sponsor_list_customers.php" class="btn btn-info" title="List Customers">
+                      <?= rand(0,9) ?>
+                    </a>
+
                     <a href="sponsors_activity.php" class="btn btn-primary" title="Activity">
                       <i class="fa fa-list"></i>
                     </a>
