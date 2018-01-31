@@ -25,7 +25,13 @@
       </a>
     </li>
 
-    
+    <li class="nav__item <?= $title == "Allowances & Incentives" ? "nav__item--active" : "" ?>">
+      <a href="allowances_and_incentive.php">
+        <i class="nav__icon fa fa-user"></i> Allowances & Incentives
+      </a>
+    </li>
+
+
 
     <!-- <li class="nav__item nav__item--has-child">
       <a href="#">
