@@ -1,9 +1,12 @@
 <?php
-$title = "Commission";
+$title = "Payment";
 
-include("header.php"); ?>
+include("header.php");
 
-<?php include("nav.php"); ?>
+include("nav.php");
+
+$p_no = rand(10000, 99999);
+?>
 
 <link rel="stylesheet" href="css/timeline.css">
 <link rel="stylesheet" href="css/modal.css">
@@ -12,8 +15,11 @@ include("header.php"); ?>
 
   <div class="content__wrapper">
 
-    
-    <h4>Commissions</h4>
+    <a href="index.php" class="button button--blue">Back</a>
+
+    <h3>Payment #<?= $p_no ?></h3>
+
+
     <table class="table">
       <thead class="table__head">
       <tr>
@@ -21,34 +27,42 @@ include("header.php"); ?>
         <th>Date</th>
         <th>Customer</th>
         <th>Description</th>
-        <th>Commission Amount</th>
-        <th>Payment ID</th>
+        <th>Commission Amount(RM)</th>
+
       </tr>
       </thead>
       <tbody class="table__body">
-        <?php
-        include("../admin/_companies.php");
-        for($i=1; $i<8;$i++){
-          $sales = rand(1,999);
-          $rate = rand(1, 5);
-          $comm = $sales * ($rate/100);
-          $paid = rand(0,1);
-          ?>
         <tr>
-          <td><?= $i ?></td>
-          <td><?= date('d M Y', strtotime(' - '.($i*2).' days')); ?></td>
-          <td><?= $companies[rand(0,8)][0] ?></td>
+          <td>1</td>
+          <td>30 Apr 2018</td>
+          <td>Lemon Media</td>
           <td>Sales Amount collected in Feb 2018</td>
-          <td><span class="comm"><?= $comm ?></span></td>
-          <td>
-            <?php if( $paid == 1 ){ ?>
-              <a href="payment.php"><?= rand(10000, 99999) ?></a>
-            <?php } ?>
-          </td>
+          <td><span class="comm">2.73</span></td>
+
         </tr>
-      <?php } ?>
+        <tr>
+          <td>2</td>
+          <td>28 Apr 2018</td>
+          <td>Liger Enterprises</td>
+          <td>Sales Amount collected in Feb 2018</td>
+          <td><span class="comm">13.66</span></td>
+
+        </tr>
+        <tr>
+          <td colspan="4" style="text-align:right;font-weight:bold;">Total</td>
+          <td><b>RM 16.39</b></td>
+          <td></td>
+        </tr>
       </tbody>
     </table>
+
+    <h3>Description</h3>
+      <p>MBB on Line, ref no <?= rand(10000000, 99999999) ?><p>
+
+
+    <h3>Amount</h3>
+      <p>RM 16.39<p>
+    </div>
 
 
   </div>
