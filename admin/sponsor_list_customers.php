@@ -37,15 +37,8 @@ include('header.php'); ?>
               <tr>
                 <th>ID</th>
                 <th>Customer Name</th>
-                <th></th>
                 <th>Customer Code</th>
-                <th>GST Reg No.</th>
-                <th>Telephone</th>
-                <th>Contact Person</th>
                 <th>Sponsor</th>
-                <th>Users</th>
-                <th>Packages</th>
-                <th>Status</th>
                 <th>Actions</th>
               </tr>
               </thead>
@@ -60,47 +53,16 @@ include('header.php'); ?>
                 <tr>
                   <td><?= $i ?></td>
                   <td><?= $companies[$i][0] ?></td>
-                  <td>
-                    <?php
-                      //$warn = rand(0,1);
-                      $warn = 1;
-                    ?>
-                    <button <?= $warn == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger warningsent" id="warningsent<?= $i ?>" title="Click to unsend reminder">Reminder Sent <br><?= date('d M Y') ?></button>
-                    <button <?= $warn == 0 ? 'style="display:none;"' : '' ?> class="btn btn-default sendwarning" id="sendwarning<?= $i ?>" title="Click to send reminder">Send Reminder</button>
-                  </td>
+
                   <td><?= $companies[$i][5] ?></td>
-                  <td><?= $companies[$i][1] ?></td>
-                  <td><?= $companies[$i][2] ?></td>
-                  <td><?= $companies[$i][3] ?></td>
+
                   <td>sponsorA</td>
-                  <td>
-                    <a href="company_users.php?c=<?= $i-1 ?>&u=<?= $companies[$i][4] ?>" class="btn btn-primary" title="<?= $companies[$i][4] ?> users">
-                      <?= $companies[$i][4] ?>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="packages.php?c=<?= $i-1 ?>&p=<?= $p ?>" class="btn btn-info" title="<?= $companies[$i][4] ?> packages">
-                      <?= $p ?>
-                    </a>
-                  </td>
-                  <td>
-                    <?php
-                      //$active = rand(0,1);
-                      $active = 1;
-                    ?>
-                    <p class="inactiveon" style="display:none;">Inactive on <?= date('d M Y', strtotime(' + 10 days')); ?></p>
-                    <button <?= $active == 1 ? 'style="display:none;"' : '' ?> class="btn btn-danger active" id="active<?= $i ?>" title="Click to change to active">Inactive</button>
-                    <button <?= $active == 0 ? 'style="display:none;"' : '' ?> class="btn btn-success inactive" id="inactive<?= $i ?>" title="Click to change to inactive">Active</button>
-                  </td>
+
                   <td>
 
-                    <a href="companies_form.php?a=Edit&c=<?= $i-1 ?>" class="btn btn-warning">
-                      <i class="fa fa-edit"></i>
+                    <a href="sponsors_generate_comm.php" class="btn btn-warning">
+                      Generate Commission
                     </a>
-
-                    <button class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </button>
 
                   </td>
                 </tr>

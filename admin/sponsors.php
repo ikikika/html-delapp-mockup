@@ -74,16 +74,22 @@ include('header.php'); ?>
                   <td><?= generateRandomString(); ?>@<?= generateRandomString().".com"; ?></td>
                   <td><?= generateRandomString(6); ?></td>
                   <td>
-                    <a href="sponsors_form.php?a=Edit" class="btn btn-warning" title="Edit">
-                      <i class="fa fa-edit"></i>
-                    </a>
+
 
                     <a href="sponsor_list_customers.php" class="btn btn-info" title="List Customers">
-                      <?= rand(0,9) ?>
+                      <?= rand(1,9) ?>
+                    </a>
+
+                    <a href="sponsor_list_commissions.php" class="btn btn-success" title="Commissions Generated">
+                      <i class="fa fa-dollar"></i>
                     </a>
 
                     <a href="sponsors_activity.php" class="btn btn-primary" title="Activity">
                       <i class="fa fa-list"></i>
+                    </a>
+
+                    <a href="sponsors_form.php?a=Edit" class="btn btn-warning" title="Edit">
+                      <i class="fa fa-edit"></i>
                     </a>
 
                     <button class="btn btn-danger">

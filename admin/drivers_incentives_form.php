@@ -134,11 +134,13 @@ include('nav.php'); ?>
 <!-- bootstrap datepicker -->
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
 <script>
-$('#datepicker1').datepicker({
-  format: 'dd-mm-yyyy'
-});
+
 
   $(function () {
+
+    $('#datepicker1').datepicker({
+      format: 'dd-mm-yyyy'
+    });
 
     $("#inc_type").change(function(){
       $(".allw-details, .allw-amt, .other-details").hide();
