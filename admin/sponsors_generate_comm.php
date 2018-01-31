@@ -78,7 +78,7 @@ include('nav.php'); ?>
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <a href="sponsor_list_commissions.php" class="btn btn-primary">Submit</button>
+                <a href="sponsor_list_commissions.php" class="btn btn-primary">Submit</a>
               </div>
             </form>
 

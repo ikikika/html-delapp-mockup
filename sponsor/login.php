@@ -45,7 +45,7 @@
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #0096d9;
+    background: #009900;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -109,7 +109,7 @@
     background: -moz-linear-gradient(right, #76b852, #8DC26F);
     background: -o-linear-gradient(right, #76b852, #8DC26F);
     background: linear-gradient(to left, #76b852, #8DC26F); */
-    background-image: url(images/road.jpg);
+    background-image: url(images/network.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

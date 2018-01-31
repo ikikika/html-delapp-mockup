@@ -19,6 +19,7 @@ $p_no = rand(10000, 99999);
 
     <h3>Payment #<?= $p_no ?></h3>
 
+    <h3>Payment Date: <?= date('d M Y') ?></h3>
 
     <table class="table">
       <thead class="table__head">
