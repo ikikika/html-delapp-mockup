@@ -1,5 +1,5 @@
 <?php
-$title = "Users";
+$title = "Admin Users";
 include('header.php'); ?>
 
 <?php include('nav.php'); ?>

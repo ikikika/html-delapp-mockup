@@ -1,5 +1,5 @@
 <?php
-$title = "Users";
+$title = "Admin Users";
 include('header.php'); ?>
 
 <?php include('nav.php'); ?>
@@ -13,11 +13,11 @@ include('header.php'); ?>
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Users Activity
+      <?= $title ?>
       <small></small>
     </h1>
     <br>
-    
+    <a href="admin_users_form.php?a=Create" class="btn btn-success">Create New Admin User</a>
   </section>
 
 
@@ -36,8 +36,11 @@ include('header.php'); ?>
               <thead>
               <tr>
                 <th>ID</th>
-                <th>Date</th>
-                <th>Activity</th>
+                <th>Full Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Actions</th>
               </tr>
               </thead>
               <tbody>
@@ -62,43 +65,34 @@ include('header.php'); ?>
                           return $randomString;
                       }
 
-                      function generate123($length = 1) {
-                            $characters = '123';
-                            $charactersLength = strlen($characters);
-                            $randomString = '';
-                            for ($i = 0; $i < $length; $i++) {
-                                $randomString .= $characters[rand(0, $charactersLength - 1)];
-                            }
-                            return $randomString;
-                        }
-
-                  for($i=1; $i<25;$i++){
+                  for($i=1; $i<50;$i++){
                 ?>
                 <tr>
                   <td><?= $i ?></td>
-                  <td><?= date('d M Y h:i:s a', strtotime('-'.($i*2).' days')) ?></td>
+                  <td><?= generateRandomString(); ?> <?= generateRandomString(); ?></td>
+                  <td><?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?>-<?= generateRandomNo(3); ?></td>
+                  <td><?= generateRandomString(); ?>@<?= generateRandomString().".com"; ?></td>
+                  <td><?= generateRandomString(6); ?></td>
                   <td>
-                    <?php
-                      $r = generate123();
-                      if( $r == 1 ){
-                        echo "Login";
-                      } else if( $r == 2 ){
-                        echo "Create Order";
-                      } else if( $r == 3){
-                        echo "Logout";
-                      }
-                     ?>
+                    <a href="admin_users_form.php?a=Edit" class="btn btn-warning" title="Edit">
+                      <i class="fa fa-edit"></i>
+                    </a>
+
+                    <a href="admin_users_permissions.php" class="btn btn-success" title="Permissions">
+                      <i class="fa fa-key"></i>
+                    </a>
+
+                    <a href="admin_users_activity.php" class="btn btn-primary" title="Activity">
+                      <i class="fa fa-list"></i>
+                    </a>
+
+                    <button class="btn btn-danger">
+                      <i class="fa fa-trash"></i>
+                    </button>
+
                   </td>
                 </tr>
-
               <?php } ?>
-              <tr>
-                <td><?= 25 ?></td>
-                <td><?= date('d M Y h:i:s a', strtotime('-50 days')) ?></td>
-                <td>
-                  Joined
-                </td>
-              </tr>
               </tbody>
 
             </table>

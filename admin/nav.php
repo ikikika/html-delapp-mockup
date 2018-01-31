@@ -51,7 +51,13 @@
 
       <li class="<?= $title == "Sponsors" ? "active" : "" ?>">
         <a href="sponsors.php">
-          <i class="fa fa-users"></i> <span>Sponsors</span>
+          <i class="fa fa-sheqel"></i> <span>Sponsors</span>
+        </a>
+      </li>
+
+      <li class="<?= $title == "Admin Users" ? "active" : "" ?>">
+        <a href="admin_users.php">
+          <i class="fa fa-lock"></i> <span>Admin Users</span>
         </a>
       </li>
 
