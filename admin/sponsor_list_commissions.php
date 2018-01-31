@@ -17,7 +17,7 @@ include('header.php'); ?>
       <small></small>
     </h1>
     <br>
-    <a href="sponsors_form.php?a=Create" class="btn btn-success">Make Payment</a>
+    <a href="sponsors_payment_form.php" class="btn btn-success">Make Payment</a>
   </section>
 
   <!-- Main content -->
@@ -70,7 +70,7 @@ include('header.php'); ?>
                   <td><span class="comm"><?= $comm ?></span></td>
                   <td>
                     <?php if( $paid == 1 ){ ?>
-                      <a href=""><?= rand(10000, 99999) ?></a>
+                      <a href="sponsors_payment.php"><?= rand(10000, 99999) ?></a>
                     <?php } ?>
                   </td>
                   <td>
